@@ -3,845 +3,479 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- SEO Primaire -->
   <title>HackClair — La cybersécurité expliquée sans jargon</title>
-  <meta name="description" content="Tu veux bosser dans la cybersécurité mais t'y connais rien ? HackClair t'explique les métiers, les outils et les formations — sans jargon, sans condescendance." />
-  <meta name="keywords" content="cybersécurité, métiers tech, reconversion, pentester, RSSI, formation cybersécurité, hacking éthique, carrière informatique" />
+  <meta name="description" content="Tu veux bosser dans la cybersécurité mais t'y connais rien ? HackClair t'explique les métiers, les salaires et les formations — sans jargon, sans condescendance." />
+  <meta name="keywords" content="cybersécurité, métiers tech, reconversion, pentester, RSSI, analyste SOC, formation cybersécurité, hacking éthique, carrière informatique, salaire cybersécurité" />
   <meta name="author" content="HackClair" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://hackclair.fr/" />
-
-  <!-- Open Graph (partage réseaux sociaux) -->
+  <link rel="canonical" href="https://aechchalyouat.github.io/hackclair-/" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://hackclair.fr/" />
   <meta property="og:title" content="HackClair — La cybersécurité expliquée sans jargon" />
-  <meta property="og:description" content="Tu veux bosser dans la cybersécurité mais t'y connais rien ? HackClair t'explique les métiers, les outils et les formations — sans jargon, sans condescendance." />
-  <meta property="og:image" content="https://hackclair.fr/og-image.png" />
+  <meta property="og:description" content="Métiers, salaires, formations — tout ce qu'il faut savoir pour se lancer dans la cybersécurité." />
   <meta property="og:locale" content="fr_FR" />
-  <meta property="og:site_name" content="HackClair" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="HackClair — La cybersécurité expliquée sans jargon" />
-  <meta name="twitter:description" content="Tu veux bosser dans la cybersécurité mais t'y connais rien ? HackClair t'explique les métiers, les outils et les formations — sans jargon, sans condescendance." />
-  <meta name="twitter:image" content="https://hackclair.fr/og-image.png" />
-
-  <!-- Schema.org JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "HackClair",
-    "url": "https://hackclair.fr",
-    "description": "La cybersécurité expliquée à ceux qui veulent s'y lancer sans avoir fait d'école d'ingé.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "HackClair",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://hackclair.fr/logo.png"
-      }
-    }
-  }
-  </script>
-
-  <!-- Fonts -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"HackClair","url":"https://aechchalyouat.github.io/hackclair-/","description":"La cybersécurité expliquée à ceux qui veulent s'y lancer."}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
-
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --bg: #0a0d12;
-      --bg2: #0f1318;
-      --bg3: #161b24;
-      --border: rgba(255,255,255,0.07);
-      --border2: rgba(255,255,255,0.12);
-      --green: #00e5a0;
-      --green2: #00b87a;
-      --text: #e8eaf0;
-      --text2: #8892a4;
-      --text3: #545e72;
-      --mono: 'Space Mono', monospace;
-      --sans: 'DM Sans', sans-serif;
-      --max: 1100px;
-      --radius: 10px;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: var(--sans);
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      font-size: 16px;
-      overflow-x: hidden;
-    }
-
-    /* ── NAVIGATION ── */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(10,13,18,0.92);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border);
-      padding: 0 2rem;
-    }
-    .nav-inner {
-      max-width: var(--max);
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 60px;
-    }
-    .logo {
-      font-family: var(--mono);
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--green);
-      text-decoration: none;
-      letter-spacing: -0.02em;
-    }
-    .logo span { color: var(--text2); }
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-    .nav-links a {
-      color: var(--text2);
-      text-decoration: none;
-      font-size: 0.875rem;
-      font-weight: 500;
-      letter-spacing: 0.01em;
-      transition: color 0.2s;
-    }
-    .nav-links a:hover { color: var(--text); }
-
-    /* ── HERO ── */
-    .hero {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 6rem 2rem 5rem;
-    }
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-family: var(--mono);
-      font-size: 0.7rem;
-      color: var(--green);
-      background: rgba(0,229,160,0.08);
-      border: 1px solid rgba(0,229,160,0.2);
-      border-radius: 100px;
-      padding: 4px 12px;
-      margin-bottom: 2rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-    .badge::before {
-      content: '';
-      display: block;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--green);
-      animation: blink 1.5s ease-in-out infinite;
-    }
-    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
-
-    h1 {
-      font-family: var(--sans);
-      font-size: clamp(2.2rem, 5vw, 3.8rem);
-      font-weight: 600;
-      line-height: 1.15;
-      letter-spacing: -0.03em;
-      max-width: 820px;
-      margin-bottom: 1.5rem;
-    }
-    h1 .accent { color: var(--green); }
-
-    .hero-desc {
-      font-size: 1.1rem;
-      color: var(--text2);
-      max-width: 560px;
-      line-height: 1.8;
-      margin-bottom: 2.5rem;
-    }
-    .cta-group {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 0.7rem 1.5rem;
-      border-radius: var(--radius);
-      font-family: var(--sans);
-      font-size: 0.9rem;
-      font-weight: 500;
-      text-decoration: none;
-      cursor: pointer;
-      border: none;
-      transition: all 0.2s;
-    }
-    .btn-primary {
-      background: var(--green);
-      color: #0a0d12;
-    }
-    .btn-primary:hover { background: #00ffb3; transform: translateY(-1px); }
-    .btn-ghost {
-      background: transparent;
-      color: var(--text);
-      border: 1px solid var(--border2);
-    }
-    .btn-ghost:hover { border-color: rgba(255,255,255,0.25); background: rgba(255,255,255,0.04); }
-
-    /* ── STATS ── */
-    .stats {
-      max-width: var(--max);
-      margin: 0 auto 5rem;
-      padding: 0 2rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1px;
-      background: var(--border);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      overflow: hidden;
-    }
-    .stat {
-      background: var(--bg2);
-      padding: 1.5rem 2rem;
-    }
-    .stat-num {
-      font-family: var(--mono);
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: var(--green);
-      line-height: 1;
-      margin-bottom: 4px;
-    }
-    .stat-label {
-      font-size: 0.8rem;
-      color: var(--text3);
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-
-    /* ── SECTIONS ── */
-    section { padding: 5rem 2rem; }
-    .section-inner { max-width: var(--max); margin: 0 auto; }
-
-    .section-tag {
-      font-family: var(--mono);
-      font-size: 0.7rem;
-      color: var(--green2);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-bottom: 0.75rem;
-    }
-    h2 {
-      font-size: clamp(1.6rem, 3vw, 2.2rem);
-      font-weight: 600;
-      letter-spacing: -0.025em;
-      line-height: 1.25;
-      margin-bottom: 1rem;
-    }
-    .section-lead {
-      color: var(--text2);
-      font-size: 1rem;
-      max-width: 560px;
-      margin-bottom: 3rem;
-    }
-
-    /* ── ARTICLE PRINCIPAL ── */
-    .article-hero {
-      background: var(--bg2);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 3rem;
-      margin-bottom: 3rem;
-    }
-    .article-hero .meta {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-      flex-wrap: wrap;
-    }
-    .tag {
-      font-family: var(--mono);
-      font-size: 0.7rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      padding: 3px 10px;
-      border-radius: 100px;
-      border: 1px solid;
-    }
-    .tag-cyber { color: var(--green); border-color: rgba(0,229,160,0.3); background: rgba(0,229,160,0.06); }
-    .tag-intro { color: #7eb8ff; border-color: rgba(126,184,255,0.3); background: rgba(126,184,255,0.06); }
-    .tag-metier { color: #ffb347; border-color: rgba(255,179,71,0.3); background: rgba(255,179,71,0.06); }
-    .meta-date { font-size: 0.8rem; color: var(--text3); }
-
-    .article-hero h3 {
-      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
-      font-weight: 600;
-      letter-spacing: -0.025em;
-      line-height: 1.3;
-      margin-bottom: 1rem;
-    }
-    .article-hero p {
-      color: var(--text2);
-      font-size: 1rem;
-      line-height: 1.8;
-      margin-bottom: 1.5rem;
-      max-width: 680px;
-    }
-
-    /* Terminal block */
-    .terminal {
-      background: #060810;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1.25rem 1.5rem;
-      font-family: var(--mono);
-      font-size: 0.8rem;
-      line-height: 1.9;
-      margin: 1.5rem 0;
-      overflow-x: auto;
-    }
-    .terminal .prompt { color: var(--green); }
-    .terminal .cmd { color: #e8eaf0; }
-    .terminal .out { color: var(--text3); }
-    .terminal .highlight { color: #7eb8ff; }
-
-    /* ── GRILLE D'ARTICLES ── */
-    .articles-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 1.25rem;
-    }
-    .card {
-      background: var(--bg2);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      text-decoration: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-      transition: border-color 0.2s, transform 0.2s;
-      cursor: pointer;
-    }
-    .card:hover {
-      border-color: var(--border2);
-      transform: translateY(-2px);
-    }
-    .card-number {
-      font-family: var(--mono);
-      font-size: 0.7rem;
-      color: var(--text3);
-    }
-    .card h4 {
-      font-size: 1rem;
-      font-weight: 600;
-      letter-spacing: -0.01em;
-      line-height: 1.4;
-    }
-    .card p {
-      font-size: 0.875rem;
-      color: var(--text2);
-      line-height: 1.7;
-      flex: 1;
-    }
-    .card-arrow {
-      font-size: 0.8rem;
-      color: var(--text3);
-      margin-top: 0.5rem;
-    }
-    .card:hover .card-arrow { color: var(--green); }
-
-    /* ── PLAN ÉDITORIAL ── */
-    .coming-list {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      overflow: hidden;
-    }
-    .coming-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 1.5rem;
-      padding: 1.25rem 1.5rem;
-      border-bottom: 1px solid var(--border);
-      transition: background 0.2s;
-    }
-    .coming-item:last-child { border-bottom: none; }
-    .coming-item:hover { background: rgba(255,255,255,0.02); }
-    .coming-num {
-      font-family: var(--mono);
-      font-size: 0.7rem;
-      color: var(--text3);
-      min-width: 2rem;
-      padding-top: 3px;
-    }
-    .coming-content h4 {
-      font-size: 0.95rem;
-      font-weight: 500;
-      margin-bottom: 3px;
-      letter-spacing: -0.01em;
-    }
-    .coming-content p {
-      font-size: 0.82rem;
-      color: var(--text2);
-      line-height: 1.6;
-    }
-    .coming-tag {
-      margin-left: auto;
-      align-self: flex-start;
-      font-family: var(--mono);
-      font-size: 0.65rem;
-      color: var(--text3);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      white-space: nowrap;
-      padding-top: 3px;
-    }
-
-    /* ── À PROPOS ── */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: start;
-    }
-    @media (max-width: 700px) { .about-grid { grid-template-columns: 1fr; gap: 2rem; } }
-    .about-text p {
-      color: var(--text2);
-      font-size: 1rem;
-      line-height: 1.9;
-      margin-bottom: 1rem;
-    }
-    .about-text strong { color: var(--text); font-weight: 500; }
-    .principle-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    .principle {
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
-    }
-    .principle-icon {
-      font-family: var(--mono);
-      font-size: 0.8rem;
-      color: var(--green);
-      padding-top: 3px;
-      min-width: 1.5rem;
-    }
-    .principle-content h4 {
-      font-size: 0.9rem;
-      font-weight: 500;
-      margin-bottom: 2px;
-    }
-    .principle-content p {
-      font-size: 0.82rem;
-      color: var(--text2);
-      line-height: 1.6;
-    }
-
-    /* ── FOOTER ── */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 2.5rem 2rem;
-    }
-    .footer-inner {
-      max-width: var(--max);
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    .footer-copy {
-      font-size: 0.8rem;
-      color: var(--text3);
-    }
-    .footer-links {
-      display: flex;
-      gap: 1.5rem;
-      list-style: none;
-    }
-    .footer-links a {
-      font-size: 0.8rem;
-      color: var(--text3);
-      text-decoration: none;
-    }
-    .footer-links a:hover { color: var(--text2); }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 600px) {
-      .hero { padding: 4rem 1.5rem 3rem; }
-      section { padding: 3rem 1.5rem; }
-      .article-hero { padding: 1.75rem; }
-      .nav-links { display: none; }
-    }
-
-    /* ── ANIMATIONS ── */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(16px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    .fade-up {
-      animation: fadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
-    }
-    .delay-1 { animation-delay: 0.1s; }
-    .delay-2 { animation-delay: 0.2s; }
-    .delay-3 { animation-delay: 0.3s; }
-    .delay-4 { animation-delay: 0.4s; }
-
-    /* Séparateur décoratif */
-    .divider {
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--border2), transparent);
-      margin: 0 2rem;
-    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#0a0d12;--bg2:#0f1318;--bg3:#161b24;--bg4:#1c2330;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.13);--green:#00e5a0;--green2:#00b87a;--blue:#7eb8ff;--orange:#ffb347;--red:#ff6b6b;--text:#e8eaf0;--text2:#8892a4;--text3:#545e72;--mono:'Space Mono',monospace;--sans:'DM Sans',sans-serif;--max:1100px;--r:10px;--r2:16px}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.7;font-size:16px;overflow-x:hidden}
+    nav{position:sticky;top:0;z-index:200;background:rgba(10,13,18,0.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 2rem}
+    .nav-inner{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px}
+    .logo{font-family:var(--mono);font-size:1.1rem;font-weight:700;color:var(--green);text-decoration:none;letter-spacing:-0.02em;cursor:pointer;background:none;border:none}
+    .logo span{color:var(--text2)}
+    .nav-links{display:flex;gap:2rem;list-style:none}
+    .nav-links a{color:var(--text2);text-decoration:none;font-size:0.875rem;font-weight:500;transition:color 0.2s;cursor:pointer}
+    .nav-links a:hover{color:var(--text)}
+    @media(max-width:600px){.nav-links{display:none}}
+    .page{display:none}
+    .page.active{display:block;animation:fadeIn 0.3s ease}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+    .hero{max-width:var(--max);margin:0 auto;padding:6rem 2rem 4rem}
+    .badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:0.7rem;color:var(--green);background:rgba(0,229,160,0.08);border:1px solid rgba(0,229,160,0.2);border-radius:100px;padding:4px 12px;margin-bottom:2rem;letter-spacing:0.1em;text-transform:uppercase}
+    .badge::before{content:'';display:block;width:6px;height:6px;border-radius:50%;background:var(--green);animation:blink 1.5s ease-in-out infinite}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
+    h1{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:600;line-height:1.15;letter-spacing:-0.03em;max-width:820px;margin-bottom:1.5rem}
+    h1 .accent{color:var(--green)}
+    .hero-desc{font-size:1.05rem;color:var(--text2);max-width:560px;line-height:1.85;margin-bottom:2.5rem}
+    .cta-group{display:flex;gap:1rem;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:0.7rem 1.4rem;border-radius:var(--r);font-family:var(--sans);font-size:0.9rem;font-weight:500;text-decoration:none;cursor:pointer;border:none;transition:all 0.2s}
+    .btn-primary{background:var(--green);color:#0a0d12}
+    .btn-primary:hover{background:#00ffb3;transform:translateY(-1px)}
+    .btn-ghost{background:transparent;color:var(--text);border:1px solid var(--border2)}
+    .btn-ghost:hover{border-color:rgba(255,255,255,0.25);background:rgba(255,255,255,0.04)}
+    .btn-outline{background:transparent;color:var(--green);border:1px solid rgba(0,229,160,0.3)}
+    .btn-outline:hover{background:rgba(0,229,160,0.08)}
+    .stats-wrap{max-width:var(--max);margin:0 auto 4rem;padding:0 2rem}
+    .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
+    .stat{background:var(--bg2);padding:1.5rem 2rem}
+    .stat-num{font-family:var(--mono);font-size:1.8rem;font-weight:700;color:var(--green);line-height:1;margin-bottom:4px}
+    .stat-label{font-size:0.78rem;color:var(--text3);letter-spacing:0.05em;text-transform:uppercase}
+    .stat-sub{font-size:0.74rem;color:var(--text3);margin-top:2px;font-style:italic}
+    section{padding:4.5rem 2rem}
+    .section-inner{max-width:var(--max);margin:0 auto}
+    .section-tag{font-family:var(--mono);font-size:0.7rem;color:var(--green2);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.75rem}
+    h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:600;letter-spacing:-0.025em;line-height:1.25;margin-bottom:1rem}
+    .section-lead{color:var(--text2);font-size:1rem;max-width:560px;margin-bottom:3rem}
+    .divider{height:1px;background:linear-gradient(90deg,transparent,var(--border2),transparent);margin:0 2rem}
+    .article-box{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r2);padding:2.5rem;margin-bottom:3rem}
+    .meta{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap}
+    .tag{font-family:var(--mono);font-size:0.68rem;letter-spacing:0.06em;text-transform:uppercase;padding:3px 10px;border-radius:100px;border:1px solid}
+    .tag-cyber{color:var(--green);border-color:rgba(0,229,160,0.3);background:rgba(0,229,160,0.06)}
+    .tag-intro{color:var(--blue);border-color:rgba(126,184,255,0.3);background:rgba(126,184,255,0.06)}
+    .tag-metier{color:var(--orange);border-color:rgba(255,179,71,0.3);background:rgba(255,179,71,0.06)}
+    .meta-date{font-size:0.8rem;color:var(--text3)}
+    .article-box h3{font-size:clamp(1.3rem,2.5vw,1.8rem);font-weight:600;letter-spacing:-0.025em;line-height:1.3;margin-bottom:1rem}
+    .article-box p{color:var(--text2);font-size:1rem;line-height:1.85;margin-bottom:1rem;max-width:700px}
+    .terminal{background:#060810;border:1px solid var(--border);border-radius:var(--r);padding:1.25rem 1.5rem;font-family:var(--mono);font-size:0.78rem;line-height:1.9;margin:1.5rem 0;overflow-x:auto}
+    .terminal .prompt{color:var(--green)}
+    .terminal .out{color:var(--text3)}
+    .terminal .hi{color:var(--blue)}
+    .terminal .warn{color:var(--red)}
+    .metiers-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.25rem}
+    .metier-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:1.75rem;cursor:pointer;transition:all 0.2s;display:flex;flex-direction:column;gap:0.75rem}
+    .metier-card:hover{border-color:var(--border2);transform:translateY(-3px);background:var(--bg3)}
+    .metier-card.disabled{opacity:0.4;cursor:default;border-style:dashed}
+    .metier-card:hover:not(.disabled) .card-arrow{color:var(--green)}
+    .card-num{font-family:var(--mono);font-size:0.68rem;color:var(--text3)}
+    .metier-card h4{font-size:1rem;font-weight:600;letter-spacing:-0.01em;line-height:1.4}
+    .metier-card p{font-size:0.875rem;color:var(--text2);line-height:1.7;flex:1}
+    .card-arrow{font-size:0.8rem;color:var(--text3);margin-top:0.5rem;transition:color 0.2s}
+    .salary-badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:0.72rem;color:var(--green2);background:rgba(0,184,122,0.08);border:1px solid rgba(0,184,122,0.2);border-radius:6px;padding:3px 8px;margin-top:4px}
+    .coming-list{border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
+    .coming-item{display:flex;align-items:flex-start;gap:1.5rem;padding:1.25rem 1.5rem;border-bottom:1px solid var(--border);transition:background 0.2s}
+    .coming-item:last-child{border-bottom:none}
+    .coming-item:hover{background:rgba(255,255,255,0.02)}
+    .coming-num{font-family:var(--mono);font-size:0.68rem;color:var(--text3);min-width:2rem;padding-top:3px}
+    .coming-content h4{font-size:0.95rem;font-weight:500;margin-bottom:3px;letter-spacing:-0.01em}
+    .coming-content p{font-size:0.82rem;color:var(--text2);line-height:1.6}
+    .coming-tag{margin-left:auto;align-self:flex-start;font-family:var(--mono);font-size:0.65rem;color:var(--text3);letter-spacing:0.06em;text-transform:uppercase;white-space:nowrap;padding-top:3px}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+    @media(max-width:700px){.about-grid{grid-template-columns:1fr;gap:2rem}}
+    .about-text p{color:var(--text2);font-size:1rem;line-height:1.9;margin-bottom:1rem}
+    .about-text strong{color:var(--text);font-weight:500}
+    .principle-list{display:flex;flex-direction:column;gap:1rem}
+    .principle{display:flex;gap:1rem;align-items:flex-start}
+    .principle-icon{font-family:var(--mono);font-size:0.78rem;color:var(--green);padding-top:3px;min-width:2rem}
+    .principle-content h4{font-size:0.9rem;font-weight:500;margin-bottom:2px}
+    .principle-content p{font-size:0.82rem;color:var(--text2);line-height:1.6}
+    /* METIER PAGE */
+    .metier-page{max-width:var(--max);margin:0 auto;padding:3rem 2rem}
+    .back-btn{display:inline-flex;align-items:center;gap:8px;color:var(--text2);font-size:0.875rem;cursor:pointer;margin-bottom:2.5rem;transition:color 0.2s;background:none;border:none;font-family:var(--sans)}
+    .back-btn:hover{color:var(--text)}
+    .metier-header{margin-bottom:3rem}
+    .metier-header .tag{margin-bottom:1rem;display:inline-block}
+    .metier-header h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:600;letter-spacing:-0.03em;line-height:1.2;margin-bottom:1rem}
+    .metier-header .intro{font-size:1.05rem;color:var(--text2);line-height:1.85;max-width:700px}
+    .info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin:2.5rem 0}
+    .info-card{background:var(--bg2);padding:1.5rem}
+    .info-card-label{font-family:var(--mono);font-size:0.65rem;color:var(--text3);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:6px}
+    .info-card-value{font-size:1.4rem;font-weight:700;color:var(--green);font-family:var(--mono);line-height:1}
+    .info-card-sub{font-size:0.78rem;color:var(--text2);margin-top:4px}
+    .content-block{margin:2.5rem 0}
+    .content-block h3{font-size:1.15rem;font-weight:600;letter-spacing:-0.02em;margin-bottom:1rem;color:var(--text)}
+    .content-block p{color:var(--text2);font-size:0.95rem;line-height:1.85;margin-bottom:0.75rem}
+    .content-block ul{list-style:none;display:flex;flex-direction:column;gap:0.6rem}
+    .content-block ul li{display:flex;align-items:flex-start;gap:0.75rem;font-size:0.9rem;color:var(--text2);line-height:1.6}
+    .content-block ul li::before{content:'→';color:var(--green);font-family:var(--mono);font-size:0.8rem;padding-top:2px;min-width:1.2rem}
+    .content-block ul li strong{color:var(--text);font-weight:500}
+    .parcours{display:flex;flex-direction:column;gap:0;border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin:1.5rem 0}
+    .parcours-step{display:flex;gap:1.5rem;padding:1.5rem;border-bottom:1px solid var(--border);align-items:flex-start}
+    .parcours-step:last-child{border-bottom:none}
+    .step-num{font-family:var(--mono);font-size:0.7rem;color:var(--green);background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.2);border-radius:6px;padding:4px 8px;min-width:2.5rem;text-align:center;margin-top:2px}
+    .step-content h4{font-size:0.95rem;font-weight:500;margin-bottom:4px}
+    .step-content p{font-size:0.83rem;color:var(--text2);line-height:1.65}
+    .step-duration{margin-left:auto;font-family:var(--mono);font-size:0.68rem;color:var(--text3);white-space:nowrap;padding-top:4px}
+    .formations{display:flex;flex-direction:column;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin:1.5rem 0}
+    .formation-row{background:var(--bg2);padding:1.25rem 1.5rem;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:1rem;align-items:center}
+    .formation-row.header{background:var(--bg3);font-family:var(--mono);font-size:0.65rem;color:var(--text3);letter-spacing:0.06em;text-transform:uppercase}
+    .formation-row:not(.header):hover{background:var(--bg3)}
+    .formation-name{font-size:0.9rem;font-weight:500}
+    .formation-detail{font-size:0.78rem;color:var(--text2)}
+    .formation-cost{font-size:0.85rem;font-weight:600;color:var(--green);font-family:var(--mono)}
+    .formation-dur{font-size:0.8rem;color:var(--text2)}
+    .formation-note{font-size:0.8rem}
+    .note-green{color:var(--green)}
+    .note-orange{color:var(--orange)}
+    @media(max-width:700px){.formation-row{grid-template-columns:1fr 1fr}.formation-row .formation-note{display:none}}
+    .ressources-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem;margin-top:1.5rem}
+    .ressource-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:1.25rem;transition:border-color 0.2s}
+    .ressource-card:hover{border-color:var(--border2)}
+    .r-type{font-family:var(--mono);font-size:0.65rem;color:var(--text3);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:6px}
+    .ressource-card h4{font-size:0.9rem;font-weight:500;margin-bottom:4px}
+    .ressource-card p{font-size:0.8rem;color:var(--text2);line-height:1.6;margin-bottom:0.75rem}
+    .r-link{font-size:0.78rem;color:var(--green);font-family:var(--mono)}
+    .guide-box{background:var(--bg2);border:1px solid rgba(0,229,160,0.2);border-radius:var(--r2);padding:2rem;margin:2.5rem 0}
+    .guide-box h3{font-size:1.1rem;font-weight:600;margin-bottom:0.5rem}
+    .guide-box p{font-size:0.9rem;color:var(--text2);margin-bottom:1.5rem;line-height:1.8}
+    footer{border-top:1px solid var(--border);padding:2.5rem 2rem}
+    .footer-inner{max-width:var(--max);margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+    .footer-copy{font-size:0.8rem;color:var(--text3)}
+    .footer-links{display:flex;gap:1.5rem;list-style:none}
+    .footer-links a{font-size:0.8rem;color:var(--text3);text-decoration:none;cursor:pointer}
+    .footer-links a:hover{color:var(--text2)}
   </style>
 </head>
-
 <body>
 
-  <!-- NAVIGATION -->
-  <nav role="navigation" aria-label="Navigation principale">
-    <div class="nav-inner">
-      <a href="/" class="logo" aria-label="HackClair - Accueil">Hack<span>Clair</span></a>
-      <ul class="nav-links">
-        <li><a href="#comprendre">Comprendre</a></li>
-        <li><a href="#metiers">Les métiers</a></li>
-        <li><a href="#commencer">Commencer</a></li>
-        <li><a href="#a-propos">À propos</a></li>
-      </ul>
-    </div>
-  </nav>
+<nav>
+  <div class="nav-inner">
+    <button class="logo" onclick="showPage('home')">Hack<span>Clair</span></button>
+    <ul class="nav-links">
+      <li><a onclick="showPage('home');goTo('comprendre')">Comprendre</a></li>
+      <li><a onclick="showPage('home');goTo('metiers')">Les métiers</a></li>
+      <li><a onclick="showPage('home');goTo('commencer')">Commencer</a></li>
+      <li><a onclick="showPage('home');goTo('a-propos')">À propos</a></li>
+    </ul>
+  </div>
+</nav>
 
-  <!-- HERO -->
-  <header class="hero" role="banner">
-    <div class="badge fade-up">Nouveau site — en ligne</div>
-
-    <h1 class="fade-up delay-1">
-      La cybersécurité,<br>
-      <span class="accent">sans le blabla technique</span>
-    </h1>
-
-    <p class="hero-desc fade-up delay-2">
-      Tu veux bosser dans la cybersécurité mais tu ne sais pas par où commencer ?
-      HackClair t'explique les métiers, les outils et les formations — directement, sans jargon.
-    </p>
-
-    <div class="cta-group fade-up delay-3">
-      <a href="#article-principal" class="btn btn-primary">Lire l'intro →</a>
-      <a href="#metiers" class="btn btn-ghost">Voir les métiers</a>
+<!-- PAGE ACCUEIL -->
+<div id="page-home" class="page active">
+  <header class="hero">
+    <div class="badge">Nouveau site — en ligne</div>
+    <h1>La cybersécurité,<br><span class="accent">sans le blabla technique</span></h1>
+    <p class="hero-desc">Tu veux bosser dans la cybersécurité mais tu ne sais pas par où commencer ? HackClair t'explique les métiers, les salaires et les formations — directement, sans jargon.</p>
+    <div class="cta-group">
+      <button class="btn btn-primary" onclick="goTo('article-principal')">Lire l'intro →</button>
+      <button class="btn btn-ghost" onclick="goTo('metiers')">Voir les métiers</button>
     </div>
   </header>
 
-  <!-- STATS -->
-  <div class="stats fade-up delay-4" aria-label="Chiffres clés de la cybersécurité">
-    <div class="stat">
-      <div class="stat-num">+40k</div>
-      <div class="stat-label">Postes non pourvus en France</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">38k€</div>
-      <div class="stat-label">Salaire junior moyen</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">12 mois</div>
-      <div class="stat-label">Pour se former</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">0</div>
-      <div class="stat-label">Raison de ne pas commencer</div>
+  <div class="stats-wrap">
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-num">+40k</div>
+        <div class="stat-label">Postes non pourvus en France</div>
+        <div class="stat-sub">Source : ANSSI 2024</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">32–70k€</div>
+        <div class="stat-label">Salaire selon le métier</div>
+        <div class="stat-sub">Junior à senior, détaillé par poste</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">6–24 mois</div>
+        <div class="stat-label">Durée de formation</div>
+        <div class="stat-sub">Selon le métier visé</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">5 métiers</div>
+        <div class="stat-label">Expliqués en détail</div>
+        <div class="stat-sub">Salaires, formations, parcours complet</div>
+      </div>
     </div>
   </div>
 
   <div class="divider"></div>
 
-  <!-- ARTICLE PRINCIPAL -->
-  <section id="comprendre" aria-labelledby="titre-comprendre">
+  <section id="comprendre">
     <div class="section-inner">
       <p class="section-tag">// introduction</p>
-      <h2 id="titre-comprendre">C'est quoi, la cybersécurité — vraiment ?</h2>
+      <h2>C'est quoi, la cybersécurité — vraiment ?</h2>
       <p class="section-lead">L'article de départ. Lis ça avant tout le reste.</p>
-
-      <article class="article-hero" id="article-principal" itemscope itemtype="https://schema.org/Article">
-        <meta itemprop="author" content="HackClair" />
-        <meta itemprop="datePublished" content="2025-01-01" />
-
+      <div class="article-box" id="article-principal">
         <div class="meta">
           <span class="tag tag-cyber">Cybersécurité</span>
           <span class="tag tag-intro">Introduction</span>
-          <span class="meta-date">Lecture : 3 min</span>
+          <span class="meta-date">Lecture : 4 min</span>
         </div>
-
-        <h3 itemprop="headline">Ton mot de passe, tes données, ton compte — qui les protège vraiment ?</h3>
-
-        <p itemprop="description">
-          Hier, tu as ouvert un e-mail. Peut-être cliqué sur un lien. Peut-être pas.
-          Mais quelqu'un, quelque part, compte sur le fait que tu ne fais pas attention.
-          C'est là qu'intervient la cybersécurité.
-        </p>
-
-        <p>
-          La cybersécurité, c'est l'ensemble des techniques et des métiers qui protègent
-          les données numériques. Les tiennes, celles de ton entreprise, celles de l'État.
-          Concrètement : empêcher que quelqu'un vole tes mots de passe, bloque ton hôpital
-          ou espionne tes communications.
-        </p>
-
-        <p>
-          Pourquoi c'est important maintenant ? Parce qu'en 2024, une entreprise française
-          sur deux a subi une cyberattaque. Et il manque plus de 40 000 professionnels
-          formés pour y répondre. La demande explose. L'offre ne suit pas.
-        </p>
-
-        <div class="terminal" role="img" aria-label="Exemple d'alerte de sécurité réseau">
-          <div><span class="prompt">$</span> <span class="cmd">nmap -sV 192.168.1.1</span></div>
-          <div><span class="out">Starting scan on host 192.168.1.1...</span></div>
-          <div><span class="out">PORT      STATE  SERVICE  VERSION</span></div>
-          <div><span class="out">22/tcp    open   ssh      OpenSSH 8.9</span></div>
-          <div><span class="out">80/tcp    open   http     nginx 1.22</span></div>
-          <div><span class="highlight">443/tcp   open   https    ✓ secure</span></div>
-          <div><span class="out">3306/tcp  open   mysql    ← </span><span style="color:#ff6b6b">attention : exposé</span></div>
+        <h3>Ton mot de passe, tes données, ton compte — qui les protège vraiment ?</h3>
+        <p>Hier, tu as ouvert un e-mail. Peut-être cliqué sur un lien. Peut-être pas. Mais quelqu'un, quelque part, compte sur le fait que tu ne fais pas attention. C'est là qu'intervient la cybersécurité.</p>
+        <p>La cybersécurité regroupe toutes les techniques et tous les métiers qui protègent les données numériques. Les tiennes, celles de ton entreprise, celles de l'État. Concrètement : empêcher que quelqu'un vole tes mots de passe, bloque un hôpital ou espionne des communications.</p>
+        <p>Pourquoi c'est urgent ? En 2024, une entreprise française sur deux a subi une cyberattaque. Le coût moyen d'une attaque sur une PME : 50 000 €. Et il manque plus de 40 000 professionnels formés pour y répondre.</p>
+        <div class="terminal">
+          <div><span class="prompt">$</span> nmap -sV 192.168.1.1</div>
+          <div><span class="out">Scanning host... PORT / STATE / SERVICE</span></div>
+          <div><span class="hi">443/tcp   open   https    ✓ connexion chiffrée</span></div>
+          <div><span class="warn">3306/tcp  open   mysql    ← base de données exposée !</span></div>
         </div>
-
-        <p>
-          Ce que tu vois ci-dessus, c'est ce qu'un professionnel de la sécurité
-          (un pentester) analyse chaque jour. Il cherche les portes ouvertes — pour
-          les fermer avant que quelqu'un de malveillant ne les trouve. Ce métier s'apprend.
-          Et sur HackClair, tu vas découvrir comment.
-        </p>
-
-        <a href="#metiers" class="btn btn-ghost" style="margin-top: 0.5rem;">Voir les métiers →</a>
-      </article>
+        <p>Ce que tu vois ci-dessus, c'est ce qu'un pentester analyse chaque jour : il cherche les portes ouvertes avant les hackers malveillants. Ce métier s'apprend — et sur HackClair, tu vas découvrir lequel te correspond.</p>
+        <button class="btn btn-ghost" onclick="goTo('metiers')" style="margin-top:0.5rem">Découvrir les métiers →</button>
+      </div>
     </div>
   </section>
 
   <div class="divider"></div>
 
-  <!-- LES MÉTIERS -->
-  <section id="metiers" aria-labelledby="titre-metiers">
+  <section id="metiers">
     <div class="section-inner">
       <p class="section-tag">// les métiers</p>
-      <h2 id="titre-metiers">Qu'est-ce qu'on fait, concrètement ?</h2>
-      <p class="section-lead">Cinq métiers. Cinq façons différentes de protéger le monde numérique.</p>
-
-      <div class="articles-grid" role="list">
-
-        <div class="card" role="listitem">
-          <div class="card-number">01 — Métier</div>
-          <div class="tag tag-cyber" style="align-self:flex-start">Pentester</div>
+      <h2>Qu'est-ce qu'on fait, concrètement ?</h2>
+      <p class="section-lead">Clique sur un métier pour tout savoir : salaires réels, durée de formation, parcours guidé étape par étape.</p>
+      <div class="metiers-grid">
+        <div class="metier-card" onclick="showMetier('pentester')">
+          <div class="card-num">01 — Métier</div>
+          <span class="tag tag-cyber" style="align-self:flex-start">Pentester</span>
           <h4>Le hacker qui travaille pour les gentils</h4>
-          <p>Son job : attaquer les systèmes de ses clients avant que les vrais hackers le fassent. Cherche les failles. Les documente. Les corrige.</p>
-          <div class="card-arrow">Lire l'article →</div>
+          <p>Attaque les systèmes de ses clients avant que les vrais hackers le fassent. Le métier le plus demandé et le mieux rémunéré du secteur.</p>
+          <div class="salary-badge">💰 35 000 – 70 000 € / an</div>
+          <div class="card-arrow">Voir salaires, formations, parcours →</div>
         </div>
-
-        <div class="card" role="listitem">
-          <div class="card-number">02 — Métier</div>
-          <div class="tag tag-metier" style="align-self:flex-start">RSSI</div>
+        <div class="metier-card" onclick="showMetier('rssi')">
+          <div class="card-num">02 — Métier</div>
+          <span class="tag tag-metier" style="align-self:flex-start">RSSI</span>
           <h4>Le chef de la sécurité informatique</h4>
-          <p>Responsable de la Sécurité des Systèmes d'Information. Il définit la stratégie, gère les équipes et parle aux dirigeants.</p>
-          <div class="card-arrow">Lire l'article →</div>
+          <p>Définit la stratégie, gère les équipes, parle aux dirigeants. Poste senior — l'objectif à 5–8 ans d'expérience.</p>
+          <div class="salary-badge">💰 55 000 – 110 000 € / an</div>
+          <div class="card-arrow">Voir salaires, formations, parcours →</div>
         </div>
-
-        <div class="card" role="listitem">
-          <div class="card-number">03 — Métier</div>
-          <div class="tag tag-intro" style="align-self:flex-start">Analyste SOC</div>
+        <div class="metier-card" onclick="showMetier('soc')">
+          <div class="card-num">03 — Métier</div>
+          <span class="tag tag-intro" style="align-self:flex-start">Analyste SOC</span>
           <h4>Les yeux rivés sur les alertes, 24h/24</h4>
-          <p>Surveille les systèmes en temps réel. Détecte les intrusions. Réagit. Le métier le plus accessible pour commencer dans la cybersécurité.</p>
-          <div class="card-arrow">Lire l'article →</div>
+          <p>Surveille les systèmes en temps réel. Le métier le plus accessible pour débuter — formation possible en 6 mois.</p>
+          <div class="salary-badge">💰 32 000 – 58 000 € / an</div>
+          <div class="card-arrow">Voir salaires, formations, parcours →</div>
         </div>
-
-        <div class="card" role="listitem">
-          <div class="card-number">04 — Métier</div>
-          <div class="tag tag-cyber" style="align-self:flex-start">Forensic</div>
+        <div class="metier-card" onclick="showMetier('forensic')">
+          <div class="card-num">04 — Métier</div>
+          <span class="tag tag-cyber" style="align-self:flex-start">Analyste Forensic</span>
           <h4>L'enquêteur du numérique</h4>
-          <p>Après une attaque, il reconstitue ce qui s'est passé. Comme un détective, mais avec des disques durs à la place des empreintes.</p>
-          <div class="card-arrow">Lire l'article →</div>
+          <p>Reconstruit ce qui s'est passé après une attaque. Travaille avec la police, les entreprises, les assureurs.</p>
+          <div class="salary-badge">💰 38 000 – 70 000 € / an</div>
+          <div class="card-arrow">Voir salaires, formations, parcours →</div>
         </div>
-
-        <div class="card" role="listitem">
-          <div class="card-number">05 — Métier</div>
-          <div class="tag tag-metier" style="align-self:flex-start">DevSecOps</div>
+        <div class="metier-card" onclick="showMetier('devsecops')">
+          <div class="card-num">05 — Métier</div>
+          <span class="tag tag-metier" style="align-self:flex-start">DevSecOps</span>
           <h4>La sécurité intégrée dès le code</h4>
-          <p>Intègre la sécurité directement dans le développement logiciel. Le profil le plus recherché des startups tech en 2025.</p>
-          <div class="card-arrow">Lire l'article →</div>
+          <p>Intègre la sécurité dans le développement logiciel. Le profil le plus recherché des startups tech en 2025.</p>
+          <div class="salary-badge">💰 42 000 – 80 000 € / an</div>
+          <div class="card-arrow">Voir salaires, formations, parcours →</div>
         </div>
-
-        <div class="card" role="listitem" style="border-style: dashed; opacity: 0.5; cursor: default;">
-          <div class="card-number">06 — À venir</div>
-          <div class="tag tag-intro" style="align-self:flex-start">Bug Bounty</div>
-          <h4>Trouver des failles et se faire payer</h4>
-          <p>Le modèle freelance de la cybersécurité. On t'explique comment débuter sur les plateformes HackerOne et YesWeHack.</p>
+        <div class="metier-card disabled">
+          <div class="card-num">06 — À venir</div>
+          <span class="tag tag-intro" style="align-self:flex-start;opacity:0.5">Bug Bounty</span>
+          <h4 style="color:var(--text2)">Trouver des failles et se faire payer</h4>
+          <p>Le modèle freelance de la cybersécurité. Plateformes HackerOne, YesWeHack.</p>
           <div class="card-arrow">Prochainement</div>
         </div>
-
       </div>
     </div>
   </section>
 
   <div class="divider"></div>
 
-  <!-- PLAN ÉDITORIAL -->
-  <section id="commencer" aria-labelledby="titre-commencer">
+  <section id="commencer">
     <div class="section-inner">
       <p class="section-tag">// à venir</p>
-      <h2 id="titre-commencer">Les prochains articles</h2>
+      <h2>Les prochains articles</h2>
       <p class="section-lead">Ce qu'on prépare pour toi. Dans l'ordre.</p>
-
-      <div class="coming-list" role="list">
-
-        <div class="coming-item" role="listitem">
-          <span class="coming-num">01</span>
-          <div class="coming-content">
-            <h4>Pentester vs hacker : la vraie différence</h4>
-            <p>L'un est payé pour pirater, l'autre risque la prison. On t'explique la ligne qui les sépare — et comment franchir le bon côté.</p>
-          </div>
-          <span class="coming-tag">Métier</span>
-        </div>
-
-        <div class="coming-item" role="listitem">
-          <span class="coming-num">02</span>
-          <div class="coming-content">
-            <h4>Se former à la cybersécurité en 2025 : les 5 vraies options</h4>
-            <p>Bootcamp, BTS, licence pro, autodidacte ou alternance ? On compare les coûts, les durées et les débouchés réels.</p>
-          </div>
-          <span class="coming-tag">Formation</span>
-        </div>
-
-        <div class="coming-item" role="listitem">
-          <span class="coming-num">03</span>
-          <div class="coming-content">
-            <h4>J'ai changé de boulot à 28 ans pour faire de la cybersécurité</h4>
-            <p>Témoignage d'un reconverti. Ancien prof de maths. Il nous raconte ses 12 mois de formation et son premier poste chez un MSSP.</p>
-          </div>
-          <span class="coming-tag">Témoignage</span>
-        </div>
-
-        <div class="coming-item" role="listitem">
-          <span class="coming-num">04</span>
-          <div class="coming-content">
-            <h4>Les certifications qui comptent vraiment (et celles à éviter)</h4>
-            <p>CEH, OSCP, CompTIA Security+ — laquelle vaut ton temps et ton argent en début de carrière ? Le guide honnête.</p>
-          </div>
-          <span class="coming-tag">Formation</span>
-        </div>
-
-        <div class="coming-item" role="listitem">
-          <span class="coming-num">05</span>
-          <div class="coming-content">
-            <h4>Ton premier lab de cybersécurité à la maison (sans dépenser un euro)</h4>
-            <p>VirtualBox + Kali Linux + une machine cible. On t'installe tout, étape par étape, pour t'entraîner légalement.</p>
-          </div>
-          <span class="coming-tag">Pratique</span>
-        </div>
-
-        <div class="coming-item" role="listitem">
-          <span class="coming-num">06</span>
-          <div class="coming-content">
-            <h4>Combien gagne un analyste SOC en France en 2025 ?</h4>
-            <p>Junior, confirmé, senior — les vrais chiffres, par ville et par secteur. Données issues des offres d'emploi de janvier 2025.</p>
-          </div>
-          <span class="coming-tag">Salaires</span>
-        </div>
-
+      <div class="coming-list">
+        <div class="coming-item"><span class="coming-num">01</span><div class="coming-content"><h4>Pentester vs hacker : la vraie différence</h4><p>L'un est payé pour pirater, l'autre risque la prison. On t'explique la ligne qui les sépare.</p></div><span class="coming-tag">Métier</span></div>
+        <div class="coming-item"><span class="coming-num">02</span><div class="coming-content"><h4>Se former en 2025 : les 5 vraies options comparées</h4><p>Bootcamp, BTS, licence pro, autodidacte ou alternance ? Coûts, durées et débouchés réels.</p></div><span class="coming-tag">Formation</span></div>
+        <div class="coming-item"><span class="coming-num">03</span><div class="coming-content"><h4>J'ai changé de boulot à 28 ans pour faire de la cybersécurité</h4><p>Ancien prof de maths reconverti. 12 mois de formation, premier poste chez un MSSP.</p></div><span class="coming-tag">Témoignage</span></div>
+        <div class="coming-item"><span class="coming-num">04</span><div class="coming-content"><h4>Les certifications qui comptent vraiment (et celles à éviter)</h4><p>CEH, OSCP, CompTIA Security+ — laquelle vaut ton temps et ton argent en débutant ?</p></div><span class="coming-tag">Formation</span></div>
+        <div class="coming-item"><span class="coming-num">05</span><div class="coming-content"><h4>Ton premier lab de cybersécurité à la maison (sans dépenser un euro)</h4><p>VirtualBox + Kali Linux. On t'installe tout, étape par étape, pour t'entraîner légalement.</p></div><span class="coming-tag">Pratique</span></div>
+        <div class="coming-item"><span class="coming-num">06</span><div class="coming-content"><h4>Combien gagne un analyste SOC en France en 2025 ?</h4><p>Junior, confirmé, senior — les vrais chiffres, par ville et par secteur.</p></div><span class="coming-tag">Salaires</span></div>
       </div>
     </div>
   </section>
 
   <div class="divider"></div>
 
-  <!-- À PROPOS -->
-  <section id="a-propos" aria-labelledby="titre-apropos">
+  <section id="a-propos">
     <div class="section-inner">
       <p class="section-tag">// à propos</p>
-      <h2 id="titre-apropos">Pourquoi HackClair existe</h2>
-
+      <h2>Pourquoi HackClair existe</h2>
       <div class="about-grid">
-        <div class="about-text" itemscope itemtype="https://schema.org/AboutPage">
-          <p>
-            La cybersécurité est l'un des domaines tech les plus accessibles — et pourtant
-            le plus mal expliqué. Les ressources disponibles sont soit trop techniques,
-            soit trop superficielles.
-          </p>
-          <p>
-            <strong>HackClair s'adresse à ceux qui veulent se lancer sans avoir fait d'école d'ingé.</strong>
-            Étudiants en réorientation, curieux, personnes en reconversion — si tu t'es déjà
-            demandé "est-ce que ce métier est fait pour moi ?", tu es au bon endroit.
-          </p>
-          <p>
-            Ici, pas de jargon inutile. Pas de condescendance. Juste ce qu'il faut savoir,
-            expliqué clairement, avec des exemples qui parlent.
-          </p>
+        <div class="about-text">
+          <p>La cybersécurité est l'un des domaines tech les plus accessibles — et pourtant le plus mal expliqué. Les ressources disponibles sont soit trop techniques, soit trop superficielles.</p>
+          <p><strong>HackClair s'adresse à ceux qui veulent se lancer sans avoir fait d'école d'ingé.</strong> Étudiants en réorientation, personnes en reconversion — si tu t'es déjà demandé "est-ce que ce métier est fait pour moi ?", tu es au bon endroit.</p>
+          <p>Ici, pas de jargon inutile. Pas de condescendance. Des salaires réels, des parcours concrets, des ressources vérifiées.</p>
         </div>
-
-        <div class="principle-list" role="list">
-          <div class="principle" role="listitem">
-            <span class="principle-icon">[01]</span>
-            <div class="principle-content">
-              <h4>Accessible d'abord</h4>
-              <p>Chaque article se lit sans connaissance préalable. On explique les termes techniques dès qu'on les utilise.</p>
-            </div>
-          </div>
-          <div class="principle" role="listitem">
-            <span class="principle-icon">[02]</span>
-            <div class="principle-content">
-              <h4>Concret toujours</h4>
-              <p>Pas de théorie sans exemple. Chaque concept est illustré par une situation réelle du quotidien professionnel.</p>
-            </div>
-          </div>
-          <div class="principle" role="listitem">
-            <span class="principle-icon">[03]</span>
-            <div class="principle-content">
-              <h4>Actionnable immédiatement</h4>
-              <p>Chaque article se termine par une prochaine étape concrète : un lien, une ressource, une action à faire.</p>
-            </div>
-          </div>
-          <div class="principle" role="listitem">
-            <span class="principle-icon">[04]</span>
-            <div class="principle-content">
-              <h4>Honnête sur les réalités</h4>
-              <p>On ne vend pas de rêve. On te dit ce que les métiers impliquent vraiment — les avantages et les contraintes.</p>
-            </div>
-          </div>
+        <div class="principle-list">
+          <div class="principle"><span class="principle-icon">[01]</span><div class="principle-content"><h4>Accessible d'abord</h4><p>Chaque article se lit sans connaissance préalable. On explique les termes dès qu'on les utilise.</p></div></div>
+          <div class="principle"><span class="principle-icon">[02]</span><div class="principle-content"><h4>Chiffres réels</h4><p>Les salaires et durées de formation viennent de sources vérifiées, pas de moyennes floues.</p></div></div>
+          <div class="principle"><span class="principle-icon">[03]</span><div class="principle-content"><h4>Actionnable</h4><p>Chaque page métier se termine par un parcours concret : quoi faire, dans quel ordre.</p></div></div>
+          <div class="principle"><span class="principle-icon">[04]</span><div class="principle-content"><h4>Honnête</h4><p>On te dit ce que les métiers impliquent vraiment — les avantages et les contraintes.</p></div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer role="contentinfo">
+  <footer>
     <div class="footer-inner">
       <p class="footer-copy">© 2025 HackClair — La cybersécurité expliquée sans jargon</p>
       <ul class="footer-links">
-        <li><a href="#a-propos">À propos</a></li>
-        <li><a href="#commencer">Articles</a></li>
+        <li><a onclick="goTo('a-propos')">À propos</a></li>
+        <li><a onclick="goTo('metiers')">Métiers</a></li>
         <li><a href="mailto:contact@hackclair.fr">Contact</a></li>
       </ul>
     </div>
   </footer>
+</div>
 
+<!-- PAGE MÉTIER -->
+<div id="page-metier" class="page">
+  <div class="metier-page" id="metier-content"></div>
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-copy">© 2025 HackClair</p>
+      <ul class="footer-links">
+        <li><a onclick="showPage('home')">← Accueil</a></li>
+        <li><a onclick="showPage('home');goTo('metiers')">Tous les métiers</a></li>
+      </ul>
+    </div>
+  </footer>
+</div>
+
+<script>
+const DATA = {
+  pentester:{tag:'Cybersécurité',tc:'tag-cyber',title:'Pentester — Testeur d\'intrusion',
+    intro:'Le pentester est un hacker légal. Son client lui demande d\'attaquer ses propres systèmes — site web, réseau, applications — pour trouver les failles avant que de vrais attaquants ne le fassent. C\'est un métier technique, varié, et parmi les mieux payés du secteur. Il existe en freelance ou en entreprise (ESN, cabinet de conseil, banque, défense).',
+    infos:[{l:'Salaire junior',v:'35–42k€',s:'0–2 ans, première embauche'},{l:'Salaire confirmé',v:'45–58k€',s:'3–5 ans d\'expérience'},{l:'Salaire senior/freelance',v:'60–70k€+',s:'5 ans+ ou indépendant'},{l:'Tension du marché',v:'Très forte',s:'Beaucoup plus d\'offres que de candidats'}],
+    journee:'Le matin, prise de connaissance d\'une mission : tester la sécurité d\'une application web bancaire. Phase de reconnaissance : cartographier l\'application, identifier les technologies. L\'après-midi : tentatives d\'attaques contrôlées — injection SQL, contournement d\'authentification. Le soir : rédaction du rapport avec les failles trouvées et les recommandations de correction. Pas de routine : chaque mission sur un nouveau système.',
+    skills:['<strong>Réseaux et systèmes</strong> : TCP/IP, Linux, Active Directory','<strong>Scripting</strong> : Python ou Bash pour automatiser les tests','<strong>Outils offensifs</strong> : Nmap, Burp Suite, Metasploit, Wireshark','<strong>Web</strong> : HTTP, API, fonctionnement des applications web','<strong>Rédaction</strong> : écrire des rapports compréhensibles pour des non-techniques'],
+    parcours:[{n:'01',t:'Bases réseaux et systèmes',d:'Comprendre IP, TCP, DNS, HTTP. Linux. Sans ça impossible de progresser. Cours gratuit : OpenClassrooms "Les réseaux de zéro".',dur:'1–2 mois'},{n:'02',t:'Initiation Linux + ligne de commande',d:'La majorité des outils tournent sous Linux. Installe Ubuntu ou Kali en machine virtuelle (gratuit via VirtualBox).',dur:'2–4 semaines'},{n:'03',t:'Parcours TryHackMe "Pre-Security"',d:'Plateforme d\'entraînement avec des machines à pirater légalement. Commence par "Pre-Security" puis "Junior Pentester".',dur:'2–3 mois'},{n:'04',t:'Certification eJPT',d:'eLearnSecurity Junior Penetration Tester — la certification d\'entrée la plus reconnue. Examen pratique. ~200€.',dur:'1 mois de préparation'},{n:'05',t:'Pratiquer sur HackTheBox',d:'Plus difficile que TryHackMe. Résoudre 10–15 machines HackTheBox te met au niveau pour postuler.',dur:'3–6 mois'},{n:'06',t:'Postuler en alternance ou stage',d:'Capgemini, Thales, Orange Cyberdefense, Wavestone recrutent des profils juniors. Tes labs et certifs font office de portfolio.',dur:'Continu'}],
+    formations:[{n:'TryHackMe',t:'Plateforme en ligne',c:'Gratuit / 14€/mois',d:'Libre',note:'★ Idéal pour commencer',nc:'note-green'},{n:'eJPT — eLearnSecurity',t:'Certification pratique',c:'~200€',d:'1 mois de prépa',note:'★ Première certif à viser',nc:'note-green'},{n:'OSCP — Offensive Security',t:'Certification référence',c:'1 499$',d:'6–12 mois de prépa',note:'★ Ouvre toutes les portes',nc:'note-green'},{n:'Bootcamp Jedha / Guardia',t:'Formation intensive',c:'6 000–9 000€',d:'3–6 mois',note:'⚠ Finançable CPF, vérifier contenu',nc:'note-orange'},{n:'Bachelor Cybersécurité (école)',t:'Diplôme bac+3',c:'5 000–8 000€/an',d:'1–3 ans',note:'★ Alternance possible',nc:'note-green'}],
+    ressources:[{t:'Plateforme',n:'TryHackMe',d:'Labs guidés pour débutants. Commence par le parcours "Pre-Security".',l:'tryhackme.com'},{t:'Plateforme',n:'HackTheBox',d:'Plus difficile, pour progresser après TryHackMe.',l:'hackthebox.com'},{t:'Certification',n:'eJPT — eLearnSecurity',d:'La première certif à viser. Examen pratique, reconnue par les recruteurs.',l:'elearnsecurity.com'},{t:'Outil gratuit',n:'Kali Linux',d:'Distribution Linux avec tous les outils de sécurité préinstallés.',l:'kali.org'}],
+    guide:'Commence par TryHackMe gratuit ce soir même — pas besoin d\'installer quoi que ce soit. 30 minutes par soir, 5 jours par semaine. En 6 mois tu as le niveau pour postuler à un premier poste junior ou une alternance.'
+  },
+  rssi:{tag:'Management',tc:'tag-metier',title:'RSSI — Responsable Sécurité des Systèmes d\'Information',
+    intro:'Le RSSI est le chef d\'orchestre de la sécurité informatique dans une organisation. Il ne hack pas — il décide. Il définit la politique de sécurité, gère les budgets, coordonne les équipes techniques et rend des comptes à la direction. C\'est un poste senior, accessible après 5 à 8 ans d\'expérience dans d\'autres métiers de la cyber.',
+    infos:[{l:'Salaire junior RSSI',v:'55–65k€',s:'Petite structure, première prise de poste'},{l:'Salaire entreprise moyenne',v:'70–85k€',s:'ETI, 3–5 ans dans le rôle'},{l:'Salaire grand groupe',v:'90–110k€',s:'CAC 40, secteur bancaire / défense'},{l:'Expérience requise',v:'5–8 ans',s:'On ne devient pas RSSI en sortie d\'école'}],
+    journee:'Le matin : réunion avec la DSI pour valider le budget annuel sécurité. Midi : présentation au COMEX d\'un rapport sur les risques cyber. Après-midi : revue des incidents de la semaine avec l\'équipe SOC, validation d\'un nouveau prestataire d\'audit. Fin de journée : réponse à un questionnaire de conformité RGPD. Très peu de technique, beaucoup de stratégie et de communication.',
+    skills:['<strong>Gestion des risques</strong> : méthode EBIOS RM, ISO 27001/27002','<strong>Cadres réglementaires</strong> : RGPD, directive NIS2','<strong>Management</strong> : gérer une équipe de 2 à 20 personnes','<strong>Communication</strong> : parler sécurité à des non-techniques (direction, clients)','<strong>Budget</strong> : justifier les investissements sécurité en termes business'],
+    parcours:[{n:'01',t:'Commencer par un métier technique',d:'Analyste SOC, pentester, admin sécurité. Le RSSI vient toujours d\'un background technique.',dur:'3–5 ans'},{n:'02',t:'Certification ISO 27001 Lead Implementer',d:'La certification de référence pour comprendre les systèmes de management de la sécurité.',dur:'3–6 mois'},{n:'03',t:'Se former à la gestion de risques EBIOS RM',d:'Méthode française imposée par l\'ANSSI. Formation disponible sur cyber.gouv.fr (gratuit).',dur:'1–2 mois'},{n:'04',t:'Certif CISSP ou CISM',d:'Certifications internationales de management. CISSP (ISC²) ou CISM (ISACA) — très demandées en grande entreprise.',dur:'6–12 mois'},{n:'05',t:'Prendre un rôle de lead / chef de projet',d:'Avant RSSI, passer par la responsabilité d\'une équipe ou d\'un projet de sécurité.',dur:'2–3 ans'}],
+    formations:[{n:'ISO 27001 Lead Implementer',t:'Certification',c:'2 000–3 500€',d:'5 jours + examen',note:'★ Référence du secteur',nc:'note-green'},{n:'CISSP — ISC²',t:'Certification internationale',c:'699$ examen',d:'6–12 mois autoformation',note:'★ Très reconnue mondialement',nc:'note-green'},{n:'CISM — ISACA',t:'Certification management',c:'575–760$',d:'4–8 mois autoformation',note:'★ Orientée management',nc:'note-green'},{n:'MBA Cybersécurité',t:'École de management',c:'10 000–25 000€',d:'1–2 ans',note:'⚠ Optionnel et coûteux',nc:'note-orange'}],
+    ressources:[{t:'Guide officiel',n:'ANSSI — Guides RSSI',d:'L\'ANSSI publie des guides gratuits pour les RSSI. Incontournables et régulièrement mis à jour.',l:'cyber.gouv.fr'},{t:'Certification',n:'CISSP — ISC²',d:'La certification de référence mondiale pour les professionnels sécurité senior.',l:'isc2.org'},{t:'Norme',n:'ISO 27001',d:'La norme internationale de management de la sécurité. Base de toute politique RSSI.',l:'iso.org'},{t:'Communauté',n:'CESIN',d:'Club des Experts de la Sécurité de l\'Information — réseau des RSSI français.',l:'cesin.fr'}],
+    guide:'Le RSSI n\'est pas un point de départ — c\'est une destination. Commence par devenir analyste SOC ou pentester, accumule de l\'expérience, prends des responsabilités, et vise ce rôle à 5–8 ans. Les certifications ISO 27001 et CISSP sont tes jalons.'
+  },
+  soc:{tag:'Surveillance',tc:'tag-intro',title:'Analyste SOC — Security Operations Center',
+    intro:'L\'analyste SOC surveille les systèmes informatiques en temps réel. Il reçoit des milliers d\'alertes par jour, trie les fausses alarmes, identifie les vraies menaces et déclenche la réponse. C\'est le métier d\'entrée le plus accessible dans la cybersécurité — avec une formation de 6 mois et la certification CompTIA Security+, tu peux postuler.',
+    infos:[{l:'Analyste N1 (junior)',v:'32–38k€',s:'Première prise de poste, 0–2 ans'},{l:'Analyste N2 (confirmé)',v:'38–48k€',s:'2–4 ans d\'expérience'},{l:'Analyste N3 / Lead',v:'48–60k€',s:'Expertise + coordination équipe'},{l:'Formation minimale',v:'6 mois',s:'Pour postuler en N1 junior'}],
+    journee:'Prise de poste : revue des alertes de la nuit. Le SIEM (outil de surveillance) a généré 847 alertes — 843 sont des faux positifs. Sur les 4 restantes : 2 sont un employé connecté depuis l\'étranger (normal, il est en déplacement), 1 est un scan automatique bloqué, et 1 est une vraie tentative d\'intrusion. L\'analyste rédige un rapport d\'incident et escalade au N3. Travail en rotation 3x8 avec majorations de nuit.',
+    skills:['<strong>SIEM</strong> : maîtriser Splunk, Microsoft Sentinel ou IBM QRadar','<strong>Analyse de logs</strong> : lire et interpréter des traces système et réseau','<strong>Réseaux</strong> : TCP/IP, savoir lire une capture Wireshark','<strong>Threat intelligence</strong> : connaître les types d\'attaques courantes','<strong>Sang-froid</strong> : gérer la pression lors d\'incidents réels'],
+    parcours:[{n:'01',t:'Bases réseaux et systèmes Linux/Windows',d:'Sans ça, impossible de lire des logs. Cours gratuits sur OpenClassrooms ou YouTube (NetworkChuck).',dur:'1–2 mois'},{n:'02',t:'Parcours SOC Level 1 sur TryHackMe',d:'Parcours complet, gratuit, guidé — parfait pour débutant complet. Inclut les bases du monitoring.',dur:'4–6 semaines'},{n:'03',t:'Formation Splunk Fundamentals 1',d:'Splunk offre une formation gratuite. C\'est le SIEM le plus demandé dans les offres d\'emploi SOC.',dur:'3–5 jours'},{n:'04',t:'Certification CompTIA Security+',d:'La certification d\'entrée la plus reconnue. Valide tes bases théoriques. ~370$.',dur:'2–3 mois de préparation'},{n:'05',t:'Postuler en SOC N1',d:'Avec Security+ et les labs TryHackMe, tu peux postuler. Atos, Sopra, Orange Cyberdefense, Capgemini recrutent massivement.',dur:'Dès 6 mois de travail'}],
+    formations:[{n:'TryHackMe — SOC Level 1',t:'Parcours en ligne',c:'Gratuit / 14€/mois',d:'2–3 mois',note:'★ Parfait pour débuter',nc:'note-green'},{n:'Splunk Fundamentals 1',t:'Formation officielle',c:'Gratuit',d:'3–5 jours',note:'★ Incontournable',nc:'note-green'},{n:'CompTIA Security+',t:'Certification',c:'~370$',d:'2–3 mois autoformation',note:'★ Très demandée en N1',nc:'note-green'},{n:'BTS SIO option SISR',t:'Formation nationale',c:'Gratuit en lycée public',d:'2 ans',note:'★ Bonne base généraliste',nc:'note-green'},{n:'Bootcamp Cybersécurité',t:'Formation intensive',c:'6 000–9 000€',d:'3–6 mois',note:'⚠ Vérifier le taux d\'insertion',nc:'note-orange'}],
+    ressources:[{t:'Plateforme',n:'TryHackMe — SOC Level 1',d:'Parcours complet pour devenir analyste SOC. Guidé, progressif, adapté aux débutants.',l:'tryhackme.com'},{t:'Outil',n:'Splunk Free Training',d:'Formation officielle gratuite sur le SIEM le plus utilisé en entreprise.',l:'education.splunk.com'},{t:'Certification',n:'CompTIA Security+',d:'La certification d\'entrée de référence. Reconnue par la quasi-totalité des employeurs.',l:'comptia.org'},{t:'Référentiel',n:'MITRE ATT&CK',d:'Base de données mondiale des techniques d\'attaque. L\'outil de référence des analystes SOC.',l:'attack.mitre.org'}],
+    guide:'C\'est le meilleur point d\'entrée dans la cyber. Commence par TryHackMe SOC Level 1 (gratuit), passe la Security+ (~370$), et postule. Le marché est tellement en tension que les employeurs forment eux-mêmes leurs N1.'
+  },
+  forensic:{tag:'Investigation',tc:'tag-cyber',title:'Analyste Forensic — Enquêteur numérique',
+    intro:'L\'analyste forensic intervient après une cyberattaque pour reconstituer exactement ce qui s\'est passé — qui a attaqué, comment, quand, quelles données ont été volées. Il travaille pour des entreprises, des cabinets d\'avocats, des assureurs, et parfois pour la police (C3N) et la gendarmerie. Profil rare, très recherché.',
+    infos:[{l:'Salaire junior',v:'38–44k€',s:'Cabinet de conseil, ESN spécialisée'},{l:'Salaire confirmé',v:'45–58k€',s:'3–5 ans, dossiers complexes'},{l:'Expert judiciaire',v:'55–70k€+',s:'Mission indépendante + honoraires'},{l:'Profil sur le marché',v:'Très rare',s:'Peu de candidats formés en France'}],
+    journee:'Une entreprise appelle : ransomware cette nuit. L\'analyste se déplace avec son matériel (disques d\'acquisition, PC forensic). Il "gèle" la scène : copies exactes des disques et de la RAM sans modifier les originaux. Retour bureau : analyse des copies avec Autopsy et Volatility. Il retrouve la timeline d\'infection, identifie le point d\'entrée (email de phishing ouvert 3 jours avant l\'attaque). Rédige un rapport technique et une synthèse pour la direction.',
+    skills:['<strong>Systèmes de fichiers</strong> : NTFS, ext4 — ce qui reste après suppression d\'un fichier','<strong>Outils forensic</strong> : Autopsy, FTK, Volatility pour l\'analyse mémoire','<strong>Malware analysis</strong> : comprendre le comportement d\'un virus','<strong>Réseaux</strong> : analyser des captures de trafic (Wireshark)','<strong>Rigueur juridique</strong> : les preuves doivent être collectées pour être recevables'],
+    parcours:[{n:'01',t:'Maîtriser Linux et les systèmes de fichiers',d:'La base du forensic. Comprendre comment un OS stocke les données et ce qui reste après suppression.',dur:'1–2 mois'},{n:'02',t:'Apprendre Autopsy (gratuit)',d:'Autopsy est l\'outil forensic open-source de référence. Tutoriels gratuits sur YouTube et dfir.training.',dur:'3–4 semaines'},{n:'03',t:'Pratiquer sur Cyberdefenders et Root-Me',d:'Cas pratiques d\'investigation forensic avec de vrais fichiers à analyser. Root-Me est en français.',dur:'2–4 mois'},{n:'04',t:'Certification GCFE ou GCFA (GIAC)',d:'Les certifications forensic les plus reconnues. GCFE pour débuter, GCFA pour le niveau avancé.',dur:'3–6 mois'},{n:'05',t:'Viser les cabinets ou la gendarmerie',d:'Cabinets : Intrinsec, Sekoia, KPMG Cyber. Secteur public : C3N (gendarmerie), BL2S (police).',dur:'Après certif'}],
+    formations:[{n:'Cyberdefenders (labs)',t:'Plateforme forensics',c:'Gratuit / 30$/mois',d:'Libre',note:'★ Cas pratiques réels',nc:'note-green'},{n:'Root-Me (section forensics)',t:'Plateforme française',c:'Gratuit',d:'Libre',note:'★ En français, progressif',nc:'note-green'},{n:'GCFE — GIAC Forensics',t:'Certification',c:'~949$',d:'3–6 mois de préparation',note:'★ Référence du secteur',nc:'note-green'},{n:'Formation SANS Institute',t:'Formation intensive pro',c:'4 000–6 000$',d:'1 semaine intensive',note:'⚠ Très cher mais le top mondial',nc:'note-orange'}],
+    ressources:[{t:'Plateforme',n:'Cyberdefenders',d:'Labs d\'investigation forensic avec des cas réels. Parfait pour pratiquer.',l:'cyberdefenders.org'},{t:'Plateforme',n:'Root-Me (forensics)',d:'Plateforme française avec des challenges progressifs. Gratuit.',l:'root-me.org'},{t:'Outil gratuit',n:'Autopsy',d:'L\'outil forensic open-source de référence. Utilisé par les pros et les forces de l\'ordre.',l:'autopsy.com'},{t:'Outil gratuit',n:'Volatility',d:'Pour analyser la mémoire RAM et retrouver ce qui tournait pendant l\'attaque.',l:'volatilityfoundation.org'}],
+    guide:'Commence par Root-Me section "Forensics" (gratuit, en français). Installe Autopsy et entraîne-toi sur des images disque d\'exercice. Ce métier est rare — peu de gens le font, donc les opportunités sont réelles pour ceux qui se forment.'
+  },
+  devsecops:{tag:'Développement',tc:'tag-metier',title:'Ingénieur DevSecOps',
+    intro:'Le DevSecOps intègre la sécurité directement dans le cycle de développement logiciel. Alors qu\'autrefois la sécurité était vérifiée en fin de projet, il la met dès le premier jour. Il automatise les tests de sécurité, configure les pipelines CI/CD, et forme les développeurs aux bonnes pratiques. C\'est le profil le plus demandé des startups et scale-ups tech en 2025. Prérequis : savoir coder.',
+    infos:[{l:'Salaire junior',v:'42–50k€',s:'Avec background dev ou ops'},{l:'Salaire confirmé',v:'52–65k€',s:'3–4 ans d\'expérience'},{l:'Salaire senior / lead',v:'65–80k€',s:'Architecte sécurité cloud'},{l:'Prérequis non négociable',v:'Savoir coder',s:'Python, Go, ou autre langage'}],
+    journee:'Matin : une équipe dev vient de pousser du code. Un scanner automatique (SAST) détecte une injection SQL potentielle. L\'ingénieur analyse l\'alerte, la confirme, bloque le déploiement. Il explique la faille au développeur et valide la correction. Après-midi : configuration d\'un nouveau scanner dans le pipeline CI/CD. Fin de journée : formation d\'1h avec l\'équipe dev sur les erreurs de sécurité les plus fréquentes.',
+    skills:['<strong>Développement</strong> : savoir coder (Python, Go) — non négociable','<strong>CI/CD</strong> : GitLab CI, GitHub Actions, Jenkins','<strong>Conteneurisation</strong> : Docker, Kubernetes et leur sécurisation','<strong>Outils SAST/DAST</strong> : SonarQube, OWASP ZAP, Snyk','<strong>Cloud security</strong> : AWS, Azure ou GCP et leurs configurations sécurisées'],
+    parcours:[{n:'01',t:'Apprendre à développer en Python',d:'Sans bases en dev, le DevSecOps est inaccessible. Python est le plus utile. Cours gratuit : "Python pour tous" sur Coursera.',dur:'3–6 mois'},{n:'02',t:'Linux et conteneurs Docker',d:'Docker est incontournable. Formation gratuite sur docs.docker.com. Ensuite Kubernetes.',dur:'1–2 mois'},{n:'03',t:'CI/CD avec GitLab (gratuit)',d:'Crée ton premier pipeline qui build, teste et scanne du code automatiquement. Tutoriel officiel GitLab.',dur:'3–4 semaines'},{n:'04',t:'OWASP Top 10',d:'La liste des 10 failles web les plus critiques. La lire et la comprendre est la base du DevSecOps.',dur:'1–2 semaines'},{n:'05',t:'Certification AWS Security Specialty',d:'Si tu vises les startups cloud-native, c\'est la certif à avoir. La majorité tourne sur AWS.',dur:'3–5 mois'}],
+    formations:[{n:'Python pour tous — Coursera',t:'MOOC gratuit',c:'Gratuit (audit)',d:'2–3 mois',note:'★ Base indispensable',nc:'note-green'},{n:'OWASP DevSecOps Guideline',t:'Guide gratuit',c:'Gratuit',d:'Lecture + pratique',note:'★ Référence mondiale',nc:'note-green'},{n:'AWS Security Specialty',t:'Certification cloud',c:'~300$',d:'3–5 mois de préparation',note:'★ Très demandée startups',nc:'note-green'},{n:'Licence Pro DevOps',t:'Université publique',c:'~400€/an',d:'1 an (après bac+2)',note:'★ Accessible et finançable',nc:'note-green'},{n:'Bootcamp DevOps',t:'Formation intensive',c:'5 000–12 000€',d:'3–6 mois',note:'⚠ Vérifier le volet sécurité',nc:'note-orange'}],
+    ressources:[{t:'Référentiel',n:'OWASP Top 10',d:'La liste des 10 failles web les plus critiques. La bible du DevSecOps.',l:'owasp.org'},{t:'Outil gratuit',n:'Snyk',d:'Scanner de vulnérabilités dans les dépendances de code. Gratuit pour les projets persos.',l:'snyk.io'},{t:'Plateforme',n:'GitLab CI (gratuit)',d:'Crée ton premier pipeline de sécurité automatisé. Tutoriel officiel disponible.',l:'gitlab.com'},{t:'Guide',n:'OWASP DevSecOps',d:'Guides et ressources de la communauté mondiale DevSecOps. Tout est gratuit.',l:'owasp.org'}],
+    guide:'Si tu ne sais pas coder, commence par Python (Coursera, gratuit). Si tu sais déjà coder, commence par lire l\'OWASP Top 10 (30 min) et installe Snyk sur un projet perso ce soir. C\'est le métier avec la plus forte croissance salariale des 3 prochaines années.'
+  }
+};
+
+function showPage(n){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page-'+n).classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function goTo(id){
+  setTimeout(()=>{
+    const el=document.getElementById(id);
+    if(el)el.scrollIntoView({behavior:'smooth',block:'start'});
+  },150);
+}
+
+function showMetier(id){
+  const m=DATA[id];
+  if(!m)return;
+  const infos=m.infos.map(i=>`<div class="info-card"><div class="info-card-label">${i.l}</div><div class="info-card-value">${i.v}</div><div class="info-card-sub">${i.s}</div></div>`).join('');
+  const skills=m.skills.map(s=>`<li>${s}</li>`).join('');
+  const parcours=m.parcours.map(p=>`<div class="parcours-step"><span class="step-num">${p.n}</span><div class="step-content"><h4>${p.t}</h4><p>${p.d}</p></div><span class="step-duration">${p.dur}</span></div>`).join('');
+  const fhead=`<div class="formation-row header"><span>Formation</span><span>Type</span><span>Coût</span><span>Durée</span></div>`;
+  const frows=m.formations.map(f=>`<div class="formation-row"><div><div class="formation-name">${f.n}</div><div class="formation-detail">${f.t}</div></div><div class="formation-cost">${f.c}</div><div class="formation-dur">${f.d}</div><div class="formation-note ${f.nc}">${f.note}</div></div>`).join('');
+  const res=m.ressources.map(r=>`<div class="ressource-card"><div class="r-type">${r.t}</div><h4>${r.n}</h4><p>${r.d}</p><span class="r-link">→ ${r.l}</span></div>`).join('');
+  document.getElementById('metier-content').innerHTML=`
+    <button class="back-btn" onclick="showPage('home');goTo('metiers')">← Retour aux métiers</button>
+    <div class="metier-header">
+      <span class="tag ${m.tc}">${m.tag}</span>
+      <h1>${m.title}</h1>
+      <p class="intro">${m.intro}</p>
+    </div>
+    <div class="info-grid">${infos}</div>
+    <div class="content-block">
+      <h3>Une journée type</h3>
+      <p>${m.journee}</p>
+    </div>
+    <div class="content-block">
+      <h3>Compétences clés pour ce métier</h3>
+      <ul>${skills}</ul>
+    </div>
+    <div class="content-block">
+      <h3>Parcours recommandé — étape par étape</h3>
+      <p style="font-size:0.85rem;color:var(--text2);margin-bottom:1rem">Ce parcours est indicatif. Tu peux aller plus vite selon ton background.</p>
+      <div class="parcours">${parcours}</div>
+    </div>
+    <div class="content-block">
+      <h3>Formations disponibles</h3>
+      <div class="formations">${fhead}${frows}</div>
+      <p style="font-size:0.78rem;color:var(--text3);margin-top:0.75rem">⚠ Les prix peuvent évoluer. Beaucoup de ces formations sont finançables via le CPF.</p>
+    </div>
+    <div class="content-block">
+      <h3>Ressources pour commencer</h3>
+      <div class="ressources-grid">${res}</div>
+    </div>
+    <div class="guide-box">
+      <h3>🎯 Par où commencer concrètement ?</h3>
+      <p>${m.guide}</p>
+      <button class="btn btn-outline" onclick="showPage('home');goTo('metiers')">← Voir les autres métiers</button>
+    </div>`;
+  showPage('metier');
+}
+</script>
 </body>
 </html>

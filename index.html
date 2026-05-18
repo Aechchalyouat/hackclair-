@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>HackClair — La cybersécurité expliquée sans jargon</title>
-  <meta name="description" content="Tu veux bosser dans la cybersécurité mais t'y connais rien ? HackClair t'explique les métiers, les salaires et les formations — sans jargon, sans condescendance." />
-  <meta name="keywords" content="cybersécurité, métiers tech, reconversion, pentester, RSSI, analyste SOC, formation cybersécurité, hacking éthique, carrière informatique, salaire cybersécurité" />
-  <meta name="author" content="HackClair" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://aechchalyouat.github.io/hackclair-/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="HackClair — La cybersécurité expliquée sans jargon" />
-  <meta property="og:description" content="Métiers, salaires, formations — tout ce qu'il faut savoir pour se lancer dans la cybersécurité." />
-  <meta property="og:locale" content="fr_FR" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"HackClair","url":"https://aechchalyouat.github.io/hackclair-/","description":"La cybersécurité expliquée à ceux qui veulent s'y lancer."}</script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <meta name="description" content="Tu veux bosser dans la cybersécurité mais tu ne sais pas par où commencer ? HackClair t'explique les métiers, les salaires et les formations — sans jargon, sans condescendance."/>
+  <meta name="keywords" content="cybersécurité débutant, métiers cybersécurité, formation cybersécurité, reconversion, pentester, analyste SOC, RSSI, master cybersécurité"/>
+  <meta name="author" content="HackClair"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://aechchalyouat.github.io/hackclair-/"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="HackClair — La cybersécurité expliquée sans jargon"/>
+  <meta property="og:description" content="Métiers, salaires, formations — tout ce qu'il faut savoir pour se lancer dans la cybersécurité, même en partant de zéro."/>
+  <meta property="og:locale" content="fr_FR"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"HackClair","url":"https://aechchalyouat.github.io/hackclair-/","description":"La cybersécurité expliquée à ceux qui veulent s'y lancer en partant de zéro."}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{--bg:#0a0d12;--bg2:#0f1318;--bg3:#161b24;--bg4:#1c2330;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.13);--green:#00e5a0;--green2:#00b87a;--blue:#7eb8ff;--orange:#ffb347;--red:#ff6b6b;--text:#e8eaf0;--text2:#8892a4;--text3:#545e72;--mono:'Space Mono',monospace;--sans:'DM Sans',sans-serif;--max:1100px;--r:10px;--r2:16px}
+    :root{--bg:#0a0d12;--bg2:#0f1318;--bg3:#161b24;--bg4:#1c2330;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.13);--green:#00e5a0;--green2:#00b87a;--blue:#7eb8ff;--orange:#ffb347;--red:#ff6b6b;--purple:#c084fc;--text:#e8eaf0;--text2:#8892a4;--text3:#545e72;--mono:'Space Mono',monospace;--sans:'DM Sans',sans-serif;--max:1100px;--r:10px;--r2:16px}
     html{scroll-behavior:smooth}
     body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.7;font-size:16px;overflow-x:hidden}
+    /* NAV */
     nav{position:sticky;top:0;z-index:200;background:rgba(10,13,18,0.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 2rem}
     .nav-inner{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px}
     .logo{font-family:var(--mono);font-size:1.1rem;font-weight:700;color:var(--green);text-decoration:none;letter-spacing:-0.02em;cursor:pointer;background:none;border:none}
@@ -30,9 +31,11 @@
     .nav-links a{color:var(--text2);text-decoration:none;font-size:0.875rem;font-weight:500;transition:color 0.2s;cursor:pointer}
     .nav-links a:hover{color:var(--text)}
     @media(max-width:600px){.nav-links{display:none}}
+    /* PAGES */
     .page{display:none}
     .page.active{display:block;animation:fadeIn 0.3s ease}
     @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+    /* HERO */
     .hero{max-width:var(--max);margin:0 auto;padding:6rem 2rem 4rem}
     .badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:0.7rem;color:var(--green);background:rgba(0,229,160,0.08);border:1px solid rgba(0,229,160,0.2);border-radius:100px;padding:4px 12px;margin-bottom:2rem;letter-spacing:0.1em;text-transform:uppercase}
     .badge::before{content:'';display:block;width:6px;height:6px;border-radius:50%;background:var(--green);animation:blink 1.5s ease-in-out infinite}
@@ -48,50 +51,56 @@
     .btn-ghost:hover{border-color:rgba(255,255,255,0.25);background:rgba(255,255,255,0.04)}
     .btn-outline{background:transparent;color:var(--green);border:1px solid rgba(0,229,160,0.3)}
     .btn-outline:hover{background:rgba(0,229,160,0.08)}
+    /* STATS */
     .stats-wrap{max-width:var(--max);margin:0 auto 4rem;padding:0 2rem}
     .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
     .stat{background:var(--bg2);padding:1.5rem 2rem}
     .stat-num{font-family:var(--mono);font-size:1.8rem;font-weight:700;color:var(--green);line-height:1;margin-bottom:4px}
     .stat-label{font-size:0.78rem;color:var(--text3);letter-spacing:0.05em;text-transform:uppercase}
     .stat-sub{font-size:0.74rem;color:var(--text3);margin-top:2px;font-style:italic}
+    /* SECTIONS */
     section{padding:4.5rem 2rem}
     .section-inner{max-width:var(--max);margin:0 auto}
     .section-tag{font-family:var(--mono);font-size:0.7rem;color:var(--green2);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.75rem}
     h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:600;letter-spacing:-0.025em;line-height:1.25;margin-bottom:1rem}
     .section-lead{color:var(--text2);font-size:1rem;max-width:560px;margin-bottom:3rem}
     .divider{height:1px;background:linear-gradient(90deg,transparent,var(--border2),transparent);margin:0 2rem}
+    /* ARTICLE */
     .article-box{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r2);padding:2.5rem;margin-bottom:3rem}
     .meta{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap}
     .tag{font-family:var(--mono);font-size:0.68rem;letter-spacing:0.06em;text-transform:uppercase;padding:3px 10px;border-radius:100px;border:1px solid}
     .tag-cyber{color:var(--green);border-color:rgba(0,229,160,0.3);background:rgba(0,229,160,0.06)}
     .tag-intro{color:var(--blue);border-color:rgba(126,184,255,0.3);background:rgba(126,184,255,0.06)}
     .tag-metier{color:var(--orange);border-color:rgba(255,179,71,0.3);background:rgba(255,179,71,0.06)}
+    .tag-bounty{color:var(--purple);border-color:rgba(192,132,252,0.3);background:rgba(192,132,252,0.06)}
     .meta-date{font-size:0.8rem;color:var(--text3)}
     .article-box h3{font-size:clamp(1.3rem,2.5vw,1.8rem);font-weight:600;letter-spacing:-0.025em;line-height:1.3;margin-bottom:1rem}
-    .article-box p{color:var(--text2);font-size:1rem;line-height:1.85;margin-bottom:1rem;max-width:700px}
+    .article-box p{color:var(--text2);font-size:1rem;line-height:1.9;margin-bottom:1rem;max-width:720px}
     .terminal{background:#060810;border:1px solid var(--border);border-radius:var(--r);padding:1.25rem 1.5rem;font-family:var(--mono);font-size:0.78rem;line-height:1.9;margin:1.5rem 0;overflow-x:auto}
     .terminal .prompt{color:var(--green)}
     .terminal .out{color:var(--text3)}
     .terminal .hi{color:var(--blue)}
     .terminal .warn{color:var(--red)}
+    /* GRILLE METIERS */
     .metiers-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.25rem}
     .metier-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:1.75rem;cursor:pointer;transition:all 0.2s;display:flex;flex-direction:column;gap:0.75rem}
     .metier-card:hover{border-color:var(--border2);transform:translateY(-3px);background:var(--bg3)}
-    .metier-card.disabled{opacity:0.4;cursor:default;border-style:dashed}
-    .metier-card:hover:not(.disabled) .card-arrow{color:var(--green)}
+    .metier-card:hover .card-arrow{color:var(--green)}
     .card-num{font-family:var(--mono);font-size:0.68rem;color:var(--text3)}
     .metier-card h4{font-size:1rem;font-weight:600;letter-spacing:-0.01em;line-height:1.4}
     .metier-card p{font-size:0.875rem;color:var(--text2);line-height:1.7;flex:1}
     .card-arrow{font-size:0.8rem;color:var(--text3);margin-top:0.5rem;transition:color 0.2s}
-    .salary-badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:0.72rem;color:var(--green2);background:rgba(0,184,122,0.08);border:1px solid rgba(0,184,122,0.2);border-radius:6px;padding:3px 8px;margin-top:4px}
+    .salary-badge{display:inline-flex;align-items:center;font-family:var(--mono);font-size:0.72rem;color:var(--green2);background:rgba(0,184,122,0.08);border:1px solid rgba(0,184,122,0.2);border-radius:6px;padding:3px 8px;margin-top:4px}
+    /* PLAN EDITORIAL */
     .coming-list{border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
     .coming-item{display:flex;align-items:flex-start;gap:1.5rem;padding:1.25rem 1.5rem;border-bottom:1px solid var(--border);transition:background 0.2s}
     .coming-item:last-child{border-bottom:none}
     .coming-item:hover{background:rgba(255,255,255,0.02)}
     .coming-num{font-family:var(--mono);font-size:0.68rem;color:var(--text3);min-width:2rem;padding-top:3px}
-    .coming-content h4{font-size:0.95rem;font-weight:500;margin-bottom:3px;letter-spacing:-0.01em}
+    .coming-content h4{font-size:0.95rem;font-weight:500;margin-bottom:3px}
     .coming-content p{font-size:0.82rem;color:var(--text2);line-height:1.6}
     .coming-tag{margin-left:auto;align-self:flex-start;font-family:var(--mono);font-size:0.65rem;color:var(--text3);letter-spacing:0.06em;text-transform:uppercase;white-space:nowrap;padding-top:3px}
+    /* A PROPOS */
     .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
     @media(max-width:700px){.about-grid{grid-template-columns:1fr;gap:2rem}}
     .about-text p{color:var(--text2);font-size:1rem;line-height:1.9;margin-bottom:1rem}
@@ -101,45 +110,48 @@
     .principle-icon{font-family:var(--mono);font-size:0.78rem;color:var(--green);padding-top:3px;min-width:2rem}
     .principle-content h4{font-size:0.9rem;font-weight:500;margin-bottom:2px}
     .principle-content p{font-size:0.82rem;color:var(--text2);line-height:1.6}
-    /* METIER PAGE */
+    /* PAGE METIER */
     .metier-page{max-width:var(--max);margin:0 auto;padding:3rem 2rem}
     .back-btn{display:inline-flex;align-items:center;gap:8px;color:var(--text2);font-size:0.875rem;cursor:pointer;margin-bottom:2.5rem;transition:color 0.2s;background:none;border:none;font-family:var(--sans)}
     .back-btn:hover{color:var(--text)}
     .metier-header{margin-bottom:3rem}
     .metier-header .tag{margin-bottom:1rem;display:inline-block}
     .metier-header h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:600;letter-spacing:-0.03em;line-height:1.2;margin-bottom:1rem}
-    .metier-header .intro{font-size:1.05rem;color:var(--text2);line-height:1.85;max-width:700px}
+    .metier-header .intro{font-size:1.05rem;color:var(--text2);line-height:1.9;max-width:720px}
     .info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin:2.5rem 0}
     .info-card{background:var(--bg2);padding:1.5rem}
     .info-card-label{font-family:var(--mono);font-size:0.65rem;color:var(--text3);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:6px}
-    .info-card-value{font-size:1.4rem;font-weight:700;color:var(--green);font-family:var(--mono);line-height:1}
+    .info-card-value{font-size:1.35rem;font-weight:700;color:var(--green);font-family:var(--mono);line-height:1}
     .info-card-sub{font-size:0.78rem;color:var(--text2);margin-top:4px}
     .content-block{margin:2.5rem 0}
     .content-block h3{font-size:1.15rem;font-weight:600;letter-spacing:-0.02em;margin-bottom:1rem;color:var(--text)}
-    .content-block p{color:var(--text2);font-size:0.95rem;line-height:1.85;margin-bottom:0.75rem}
+    .content-block p{color:var(--text2);font-size:0.95rem;line-height:1.9;margin-bottom:0.75rem}
     .content-block ul{list-style:none;display:flex;flex-direction:column;gap:0.6rem}
-    .content-block ul li{display:flex;align-items:flex-start;gap:0.75rem;font-size:0.9rem;color:var(--text2);line-height:1.6}
+    .content-block ul li{display:flex;align-items:flex-start;gap:0.75rem;font-size:0.9rem;color:var(--text2);line-height:1.65}
     .content-block ul li::before{content:'→';color:var(--green);font-family:var(--mono);font-size:0.8rem;padding-top:2px;min-width:1.2rem}
     .content-block ul li strong{color:var(--text);font-weight:500}
+    /* PARCOURS */
     .parcours{display:flex;flex-direction:column;gap:0;border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin:1.5rem 0}
     .parcours-step{display:flex;gap:1.5rem;padding:1.5rem;border-bottom:1px solid var(--border);align-items:flex-start}
     .parcours-step:last-child{border-bottom:none}
     .step-num{font-family:var(--mono);font-size:0.7rem;color:var(--green);background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.2);border-radius:6px;padding:4px 8px;min-width:2.5rem;text-align:center;margin-top:2px}
     .step-content h4{font-size:0.95rem;font-weight:500;margin-bottom:4px}
-    .step-content p{font-size:0.83rem;color:var(--text2);line-height:1.65}
+    .step-content p{font-size:0.83rem;color:var(--text2);line-height:1.7}
     .step-duration{margin-left:auto;font-family:var(--mono);font-size:0.68rem;color:var(--text3);white-space:nowrap;padding-top:4px}
+    /* FORMATIONS */
     .formations{display:flex;flex-direction:column;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin:1.5rem 0}
-    .formation-row{background:var(--bg2);padding:1.25rem 1.5rem;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:1rem;align-items:center}
+    .formation-row{background:var(--bg2);padding:1.1rem 1.5rem;display:grid;grid-template-columns:2.2fr 0.9fr 1fr 1.1fr;gap:1rem;align-items:center}
     .formation-row.header{background:var(--bg3);font-family:var(--mono);font-size:0.65rem;color:var(--text3);letter-spacing:0.06em;text-transform:uppercase}
     .formation-row:not(.header):hover{background:var(--bg3)}
     .formation-name{font-size:0.9rem;font-weight:500}
     .formation-detail{font-size:0.78rem;color:var(--text2)}
     .formation-cost{font-size:0.85rem;font-weight:600;color:var(--green);font-family:var(--mono)}
-    .formation-dur{font-size:0.8rem;color:var(--text2)}
+    .formation-dur{font-size:0.82rem;color:var(--text2)}
     .formation-note{font-size:0.8rem}
     .note-green{color:var(--green)}
     .note-orange{color:var(--orange)}
     @media(max-width:700px){.formation-row{grid-template-columns:1fr 1fr}.formation-row .formation-note{display:none}}
+    /* RESSOURCES */
     .ressources-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem;margin-top:1.5rem}
     .ressource-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:1.25rem;transition:border-color 0.2s}
     .ressource-card:hover{border-color:var(--border2)}
@@ -147,9 +159,26 @@
     .ressource-card h4{font-size:0.9rem;font-weight:500;margin-bottom:4px}
     .ressource-card p{font-size:0.8rem;color:var(--text2);line-height:1.6;margin-bottom:0.75rem}
     .r-link{font-size:0.78rem;color:var(--green);font-family:var(--mono)}
+    /* GUIDE BOX */
     .guide-box{background:var(--bg2);border:1px solid rgba(0,229,160,0.2);border-radius:var(--r2);padding:2rem;margin:2.5rem 0}
     .guide-box h3{font-size:1.1rem;font-weight:600;margin-bottom:0.5rem}
-    .guide-box p{font-size:0.9rem;color:var(--text2);margin-bottom:1.5rem;line-height:1.8}
+    .guide-box p{font-size:0.9rem;color:var(--text2);margin-bottom:1.5rem;line-height:1.85}
+    /* HIGHLIGHT BOX */
+    .highlight-box{background:rgba(0,229,160,0.05);border:1px solid rgba(0,229,160,0.15);border-radius:var(--r);padding:1.25rem 1.5rem;margin:1.5rem 0}
+    .highlight-box p{font-size:0.9rem;color:var(--text2);line-height:1.8;margin:0}
+    .highlight-box strong{color:var(--green)}
+    /* ECOLES TABLE */
+    .ecoles{display:flex;flex-direction:column;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin:1.5rem 0}
+    .ecole-row{background:var(--bg2);padding:1.25rem 1.5rem;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:1rem;align-items:start}
+    .ecole-row.header{background:var(--bg3);font-family:var(--mono);font-size:0.65rem;color:var(--text3);letter-spacing:0.06em;text-transform:uppercase;align-items:center}
+    .ecole-row:not(.header):hover{background:var(--bg3)}
+    .ecole-name{font-size:0.9rem;font-weight:500}
+    .ecole-detail{font-size:0.78rem;color:var(--text2);margin-top:2px}
+    .ecole-niv{font-size:0.82rem;color:var(--purple)}
+    .ecole-dur{font-size:0.8rem;color:var(--text2)}
+    .ecole-cout{font-size:0.82rem;color:var(--orange);font-family:var(--mono)}
+    @media(max-width:700px){.ecole-row{grid-template-columns:1fr 1fr}}
+    /* FOOTER */
     footer{border-top:1px solid var(--border);padding:2.5rem 2rem}
     .footer-inner{max-width:var(--max);margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
     .footer-copy{font-size:0.8rem;color:var(--text3)}
@@ -172,14 +201,15 @@
   </div>
 </nav>
 
-<!-- PAGE ACCUEIL -->
+<!-- ══════════════════════ PAGE ACCUEIL ══════════════════════ -->
 <div id="page-home" class="page active">
+
   <header class="hero">
-    <div class="badge">Nouveau site — en ligne</div>
+    <div class="badge">Le guide des débutants en cyber</div>
     <h1>La cybersécurité,<br><span class="accent">sans le blabla technique</span></h1>
-    <p class="hero-desc">Tu veux bosser dans la cybersécurité mais tu ne sais pas par où commencer ? HackClair t'explique les métiers, les salaires et les formations — directement, sans jargon.</p>
+    <p class="hero-desc">Tu n'as pas besoin d'être un génie de l'informatique pour travailler dans la cybersécurité. Des milliers de postes sont non pourvus en France — et les entreprises cherchent des personnes motivées, pas des diplômes parfaits.</p>
     <div class="cta-group">
-      <button class="btn btn-primary" onclick="goTo('article-principal')">Lire l'intro →</button>
+      <button class="btn btn-primary" onclick="goTo('article-principal')">Comprendre en 5 min →</button>
       <button class="btn btn-ghost" onclick="goTo('metiers')">Voir les métiers</button>
     </div>
   </header>
@@ -187,52 +217,54 @@
   <div class="stats-wrap">
     <div class="stats">
       <div class="stat">
-        <div class="stat-num">+40k</div>
-        <div class="stat-label">Postes non pourvus en France</div>
-        <div class="stat-sub">Source : ANSSI 2024</div>
+        <div class="stat-num">+40 000</div>
+        <div class="stat-label">Postes sans candidat</div>
+        <div class="stat-sub">En France, en ce moment — Source ANSSI</div>
       </div>
       <div class="stat">
-        <div class="stat-num">32–70k€</div>
-        <div class="stat-label">Salaire selon le métier</div>
-        <div class="stat-sub">Junior à senior, détaillé par poste</div>
+        <div class="stat-num">32 → 100k€</div>
+        <div class="stat-label">Salaire selon l'expérience</div>
+        <div class="stat-sub">Du premier poste jusqu'au directeur sécu</div>
       </div>
       <div class="stat">
-        <div class="stat-num">6–24 mois</div>
-        <div class="stat-label">Durée de formation</div>
-        <div class="stat-sub">Selon le métier visé</div>
+        <div class="stat-num">6 mois → 5 ans</div>
+        <div class="stat-label">Durée de formation possible</div>
+        <div class="stat-sub">Selon le niveau et le métier visé</div>
       </div>
       <div class="stat">
-        <div class="stat-num">5 métiers</div>
-        <div class="stat-label">Expliqués en détail</div>
-        <div class="stat-sub">Salaires, formations, parcours complet</div>
+        <div class="stat-num">6 métiers</div>
+        <div class="stat-label">Expliqués de A à Z</div>
+        <div class="stat-sub">Salaires réels, parcours, écoles</div>
       </div>
     </div>
   </div>
 
   <div class="divider"></div>
 
+  <!-- INTRO -->
   <section id="comprendre">
     <div class="section-inner">
       <p class="section-tag">// introduction</p>
       <h2>C'est quoi, la cybersécurité — vraiment ?</h2>
-      <p class="section-lead">L'article de départ. Lis ça avant tout le reste.</p>
+      <p class="section-lead">Pas de jargon. Juste ce qu'il faut comprendre pour commencer.</p>
       <div class="article-box" id="article-principal">
         <div class="meta">
           <span class="tag tag-cyber">Cybersécurité</span>
-          <span class="tag tag-intro">Introduction</span>
-          <span class="meta-date">Lecture : 4 min</span>
+          <span class="tag tag-intro">Pour débutants</span>
+          <span class="meta-date">Lecture : 5 min</span>
         </div>
-        <h3>Ton mot de passe, tes données, ton compte — qui les protège vraiment ?</h3>
-        <p>Hier, tu as ouvert un e-mail. Peut-être cliqué sur un lien. Peut-être pas. Mais quelqu'un, quelque part, compte sur le fait que tu ne fais pas attention. C'est là qu'intervient la cybersécurité.</p>
-        <p>La cybersécurité regroupe toutes les techniques et tous les métiers qui protègent les données numériques. Les tiennes, celles de ton entreprise, celles de l'État. Concrètement : empêcher que quelqu'un vole tes mots de passe, bloque un hôpital ou espionne des communications.</p>
-        <p>Pourquoi c'est urgent ? En 2024, une entreprise française sur deux a subi une cyberattaque. Le coût moyen d'une attaque sur une PME : 50 000 €. Et il manque plus de 40 000 professionnels formés pour y répondre.</p>
+        <h3>Imagine que ta maison a une porte mal fermée. La cybersécurité, c'est celui qui la répare.</h3>
+        <p>Chaque jour, des millions de personnes utilisent internet — pour payer leurs courses, consulter leur médecin, parler à leurs amis. Derrière tout ça, il y a des ordinateurs qui stockent des informations. Et comme dans la vraie vie, certaines personnes cherchent à entrer là où elles ne devraient pas.</p>
+        <p>La cybersécurité, c'est le domaine qui protège ces informations. Ce sont les personnes dont le travail est de fermer les portes mal verrouillées, de repérer les intrus et d'empêcher les vols de données — avant qu'ils ne se produisent.</p>
         <div class="terminal">
-          <div><span class="prompt">$</span> nmap -sV 192.168.1.1</div>
-          <div><span class="out">Scanning host... PORT / STATE / SERVICE</span></div>
-          <div><span class="hi">443/tcp   open   https    ✓ connexion chiffrée</span></div>
-          <div><span class="warn">3306/tcp  open   mysql    ← base de données exposée !</span></div>
+          <div><span class="prompt">$</span> Vérification de la sécurité d'un site web...</div>
+          <div><span class="hi">✓ Page de connexion : protégée</span></div>
+          <div><span class="hi">✓ Données personnelles : chiffrées</span></div>
+          <div><span class="warn">✗ Base de données : accessible depuis internet → risque de vol de données !</span></div>
+          <div><span class="out">→ Le pentester documente la faille et prévient l'entreprise</span></div>
         </div>
-        <p>Ce que tu vois ci-dessus, c'est ce qu'un pentester analyse chaque jour : il cherche les portes ouvertes avant les hackers malveillants. Ce métier s'apprend — et sur HackClair, tu vas découvrir lequel te correspond.</p>
+        <p>Ce que tu vois ci-dessus, c'est le travail d'un "testeur d'intrusion" (un pentester) : il vérifie qu'un site est bien protégé, trouve les points faibles, et aide l'entreprise à les corriger. Il est payé pour ça. Légalement. Et ça se paye très bien.</p>
+        <p>Le secteur manque cruellement de monde. En France, il y a aujourd'hui plus de 40 000 postes ouverts sans candidats. Les entreprises, les hôpitaux, les banques, l'armée — tout le monde recrute. Et les profils viennent de partout : anciens commerciaux, ex-enseignants, reconvertis de tous horizons.</p>
         <button class="btn btn-ghost" onclick="goTo('metiers')" style="margin-top:0.5rem">Découvrir les métiers →</button>
       </div>
     </div>
@@ -240,77 +272,87 @@
 
   <div class="divider"></div>
 
+  <!-- METIERS -->
   <section id="metiers">
     <div class="section-inner">
       <p class="section-tag">// les métiers</p>
-      <h2>Qu'est-ce qu'on fait, concrètement ?</h2>
-      <p class="section-lead">Clique sur un métier pour tout savoir : salaires réels, durée de formation, parcours guidé étape par étape.</p>
+      <h2>6 métiers, des dizaines de chemins possibles</h2>
+      <p class="section-lead">Clique sur un métier pour tout voir : ce qu'on fait vraiment, combien ça paye, comment se former, quelles écoles y aller.</p>
       <div class="metiers-grid">
+
         <div class="metier-card" onclick="showMetier('pentester')">
           <div class="card-num">01 — Métier</div>
           <span class="tag tag-cyber" style="align-self:flex-start">Pentester</span>
           <h4>Le hacker qui travaille pour les gentils</h4>
-          <p>Attaque les systèmes de ses clients avant que les vrais hackers le fassent. Le métier le plus demandé et le mieux rémunéré du secteur.</p>
+          <p>Son job : essayer de pirater les systèmes de ses clients pour trouver les failles avant les vrais criminels. Le métier le plus excitant — et le mieux payé.</p>
           <div class="salary-badge">💰 35 000 – 70 000 € / an</div>
-          <div class="card-arrow">Voir salaires, formations, parcours →</div>
+          <div class="card-arrow">Tout savoir sur ce métier →</div>
         </div>
+
         <div class="metier-card" onclick="showMetier('rssi')">
           <div class="card-num">02 — Métier</div>
           <span class="tag tag-metier" style="align-self:flex-start">RSSI</span>
-          <h4>Le chef de la sécurité informatique</h4>
-          <p>Définit la stratégie, gère les équipes, parle aux dirigeants. Poste senior — l'objectif à 5–8 ans d'expérience.</p>
+          <h4>Le directeur de la sécurité informatique</h4>
+          <p>Il ne s'occupe pas de technique — il décide de la stratégie, manage les équipes et parle directement aux grands patrons. Le poste qui paye le mieux.</p>
           <div class="salary-badge">💰 55 000 – 110 000 € / an</div>
-          <div class="card-arrow">Voir salaires, formations, parcours →</div>
+          <div class="card-arrow">Tout savoir sur ce métier →</div>
         </div>
+
         <div class="metier-card" onclick="showMetier('soc')">
           <div class="card-num">03 — Métier</div>
           <span class="tag tag-intro" style="align-self:flex-start">Analyste SOC</span>
-          <h4>Les yeux rivés sur les alertes, 24h/24</h4>
-          <p>Surveille les systèmes en temps réel. Le métier le plus accessible pour débuter — formation possible en 6 mois.</p>
+          <h4>La sentinelle du numérique</h4>
+          <p>Il surveille les systèmes informatiques en temps réel et réagit en cas d'attaque. Le métier le plus accessible pour commencer — possible en 6 mois.</p>
           <div class="salary-badge">💰 32 000 – 58 000 € / an</div>
-          <div class="card-arrow">Voir salaires, formations, parcours →</div>
+          <div class="card-arrow">Tout savoir sur ce métier →</div>
         </div>
+
         <div class="metier-card" onclick="showMetier('forensic')">
           <div class="card-num">04 — Métier</div>
           <span class="tag tag-cyber" style="align-self:flex-start">Analyste Forensic</span>
-          <h4>L'enquêteur du numérique</h4>
-          <p>Reconstruit ce qui s'est passé après une attaque. Travaille avec la police, les entreprises, les assureurs.</p>
+          <h4>Le détective du monde numérique</h4>
+          <p>Après une cyberattaque, il mène l'enquête : qui a fait quoi, comment, quand ? Travaille avec la police, les entreprises, les assureurs. Profil très rare.</p>
           <div class="salary-badge">💰 38 000 – 70 000 € / an</div>
-          <div class="card-arrow">Voir salaires, formations, parcours →</div>
+          <div class="card-arrow">Tout savoir sur ce métier →</div>
         </div>
+
         <div class="metier-card" onclick="showMetier('devsecops')">
           <div class="card-num">05 — Métier</div>
           <span class="tag tag-metier" style="align-self:flex-start">DevSecOps</span>
-          <h4>La sécurité intégrée dès le code</h4>
-          <p>Intègre la sécurité dans le développement logiciel. Le profil le plus recherché des startups tech en 2025.</p>
+          <h4>Le gardien qui protège les logiciels dès le départ</h4>
+          <p>Il intègre la sécurité directement quand les développeurs créent un logiciel — au lieu d'attendre la fin. Le profil star des startups tech en 2025.</p>
           <div class="salary-badge">💰 42 000 – 80 000 € / an</div>
-          <div class="card-arrow">Voir salaires, formations, parcours →</div>
+          <div class="card-arrow">Tout savoir sur ce métier →</div>
         </div>
-        <div class="metier-card disabled">
-          <div class="card-num">06 — À venir</div>
-          <span class="tag tag-intro" style="align-self:flex-start;opacity:0.5">Bug Bounty</span>
-          <h4 style="color:var(--text2)">Trouver des failles et se faire payer</h4>
-          <p>Le modèle freelance de la cybersécurité. Plateformes HackerOne, YesWeHack.</p>
-          <div class="card-arrow">Prochainement</div>
+
+        <div class="metier-card" onclick="showMetier('bugbounty')">
+          <div class="card-num">06 — Métier</div>
+          <span class="tag tag-bounty" style="align-self:flex-start">Bug Bounty</span>
+          <h4>Trouver des failles et se faire payer — en freelance</h4>
+          <p>Les grandes entreprises comme Google ou Microsoft paient des hackers indépendants pour trouver leurs failles. Certains gagnent plus de 100 000 € par an.</p>
+          <div class="salary-badge">💰 0 – 100 000 € / an (selon talent)</div>
+          <div class="card-arrow">Tout savoir sur ce métier →</div>
         </div>
+
       </div>
     </div>
   </section>
 
   <div class="divider"></div>
 
+  <!-- PLAN EDITORIAL -->
   <section id="commencer">
     <div class="section-inner">
-      <p class="section-tag">// à venir</p>
+      <p class="section-tag">// à venir sur hackclair</p>
       <h2>Les prochains articles</h2>
       <p class="section-lead">Ce qu'on prépare pour toi. Dans l'ordre.</p>
       <div class="coming-list">
-        <div class="coming-item"><span class="coming-num">01</span><div class="coming-content"><h4>Pentester vs hacker : la vraie différence</h4><p>L'un est payé pour pirater, l'autre risque la prison. On t'explique la ligne qui les sépare.</p></div><span class="coming-tag">Métier</span></div>
-        <div class="coming-item"><span class="coming-num">02</span><div class="coming-content"><h4>Se former en 2025 : les 5 vraies options comparées</h4><p>Bootcamp, BTS, licence pro, autodidacte ou alternance ? Coûts, durées et débouchés réels.</p></div><span class="coming-tag">Formation</span></div>
-        <div class="coming-item"><span class="coming-num">03</span><div class="coming-content"><h4>J'ai changé de boulot à 28 ans pour faire de la cybersécurité</h4><p>Ancien prof de maths reconverti. 12 mois de formation, premier poste chez un MSSP.</p></div><span class="coming-tag">Témoignage</span></div>
-        <div class="coming-item"><span class="coming-num">04</span><div class="coming-content"><h4>Les certifications qui comptent vraiment (et celles à éviter)</h4><p>CEH, OSCP, CompTIA Security+ — laquelle vaut ton temps et ton argent en débutant ?</p></div><span class="coming-tag">Formation</span></div>
-        <div class="coming-item"><span class="coming-num">05</span><div class="coming-content"><h4>Ton premier lab de cybersécurité à la maison (sans dépenser un euro)</h4><p>VirtualBox + Kali Linux. On t'installe tout, étape par étape, pour t'entraîner légalement.</p></div><span class="coming-tag">Pratique</span></div>
-        <div class="coming-item"><span class="coming-num">06</span><div class="coming-content"><h4>Combien gagne un analyste SOC en France en 2025 ?</h4><p>Junior, confirmé, senior — les vrais chiffres, par ville et par secteur.</p></div><span class="coming-tag">Salaires</span></div>
+        <div class="coming-item"><span class="coming-num">01</span><div class="coming-content"><h4>Hacker vs cybercriminels : quelle est vraiment la différence ?</h4><p>L'un est un héros du numérique payé par les entreprises, l'autre risque la prison. On te raconte les deux côtés.</p></div><span class="coming-tag">Métier</span></div>
+        <div class="coming-item"><span class="coming-num">02</span><div class="coming-content"><h4>Du bac à bac+5 : tous les chemins vers la cybersécurité</h4><p>BTS, licence, master, école d'ingé, bootcamp — on compare tous les parcours avec les coûts et les débouchés réels.</p></div><span class="coming-tag">Formation</span></div>
+        <div class="coming-item"><span class="coming-num">03</span><div class="coming-content"><h4>Je me suis reconverti à 30 ans pour faire de la cybersécurité</h4><p>Témoignage d'un ancien comptable. 14 mois de formation, premier poste à 38 000 € dans une banque.</p></div><span class="coming-tag">Témoignage</span></div>
+        <div class="coming-item"><span class="coming-num">04</span><div class="coming-content"><h4>Les certifications qui ouvrent des portes (et celles qui ne servent à rien)</h4><p>On t'explique quelles certifications les recruteurs regardent vraiment — et lesquelles ne valent pas ton argent.</p></div><span class="coming-tag">Formation</span></div>
+        <div class="coming-item"><span class="coming-num">05</span><div class="coming-content"><h4>Ton premier entraînement de hacker éthique à la maison (gratuit)</h4><p>On t'installe un environnement d'entraînement complet sur ton ordinateur, étape par étape, sans rien dépenser.</p></div><span class="coming-tag">Pratique</span></div>
+        <div class="coming-item"><span class="coming-num">06</span><div class="coming-content"><h4>Combien gagne-t-on vraiment dans la cybersécurité en 2025 ?</h4><p>Les vrais chiffres par ville, par secteur, et selon ton niveau — pas les moyennes floues qu'on trouve partout.</p></div><span class="coming-tag">Salaires</span></div>
       </div>
     </div>
   </section>
@@ -323,15 +365,15 @@
       <h2>Pourquoi HackClair existe</h2>
       <div class="about-grid">
         <div class="about-text">
-          <p>La cybersécurité est l'un des domaines tech les plus accessibles — et pourtant le plus mal expliqué. Les ressources disponibles sont soit trop techniques, soit trop superficielles.</p>
-          <p><strong>HackClair s'adresse à ceux qui veulent se lancer sans avoir fait d'école d'ingé.</strong> Étudiants en réorientation, personnes en reconversion — si tu t'es déjà demandé "est-ce que ce métier est fait pour moi ?", tu es au bon endroit.</p>
-          <p>Ici, pas de jargon inutile. Pas de condescendance. Des salaires réels, des parcours concrets, des ressources vérifiées.</p>
+          <p>Quand on s'intéresse à la cybersécurité pour la première fois, on tombe sur deux extrêmes : soit des contenus hyper-techniques incompréhensibles, soit des publicités pour des formations hors de prix.</p>
+          <p><strong>HackClair, c'est le milieu.</strong> Un site fait pour les gens qui n'y connaissent rien et qui veulent comprendre honnêtement si ce domaine est fait pour eux — avant de s'engager dans une formation.</p>
+          <p>Pas de jargon non expliqué. Pas de promesses exagérées. Des salaires réels, des parcours concrets, et des témoignages de vraies personnes reconverties.</p>
         </div>
         <div class="principle-list">
-          <div class="principle"><span class="principle-icon">[01]</span><div class="principle-content"><h4>Accessible d'abord</h4><p>Chaque article se lit sans connaissance préalable. On explique les termes dès qu'on les utilise.</p></div></div>
-          <div class="principle"><span class="principle-icon">[02]</span><div class="principle-content"><h4>Chiffres réels</h4><p>Les salaires et durées de formation viennent de sources vérifiées, pas de moyennes floues.</p></div></div>
-          <div class="principle"><span class="principle-icon">[03]</span><div class="principle-content"><h4>Actionnable</h4><p>Chaque page métier se termine par un parcours concret : quoi faire, dans quel ordre.</p></div></div>
-          <div class="principle"><span class="principle-icon">[04]</span><div class="principle-content"><h4>Honnête</h4><p>On te dit ce que les métiers impliquent vraiment — les avantages et les contraintes.</p></div></div>
+          <div class="principle"><span class="principle-icon">[01]</span><div class="principle-content"><h4>Zéro jargon non expliqué</h4><p>Chaque terme technique est expliqué au moment où on l'utilise. Personne n'est laissé derrière.</p></div></div>
+          <div class="principle"><span class="principle-icon">[02]</span><div class="principle-content"><h4>Des chiffres vérifiés</h4><p>Les salaires et durées de formation viennent de données réelles, pas de moyennes inventées.</p></div></div>
+          <div class="principle"><span class="principle-icon">[03]</span><div class="principle-content"><h4>Un parcours pour chaque profil</h4><p>Que tu aies le bac ou un master, que tu veuilles 6 mois ou 5 ans de formation — il y a un chemin pour toi.</p></div></div>
+          <div class="principle"><span class="principle-icon">[04]</span><div class="principle-content"><h4>Honnête sur les réalités</h4><p>On te dit aussi ce qui est difficile. Un vrai guide, pas une publicité.</p></div></div>
         </div>
       </div>
     </div>
@@ -339,7 +381,10 @@
 
   <footer>
     <div class="footer-inner">
-      <p class="footer-copy">© 2025 HackClair — La cybersécurité expliquée sans jargon</p>
+      <div>
+        <p class="footer-copy">© 2025 HackClair — La cybersécurité expliquée sans jargon</p>
+        <p style="font-size:0.78rem;color:var(--text3);margin-top:4px">Écrit par <strong style="color:var(--text2);font-weight:500">Amine Ech Chalyouat et Magyd Baroni</strong></p>
+      </div>
       <ul class="footer-links">
         <li><a onclick="goTo('a-propos')">À propos</a></li>
         <li><a onclick="goTo('metiers')">Métiers</a></li>
@@ -349,7 +394,7 @@
   </footer>
 </div>
 
-<!-- PAGE MÉTIER -->
+<!-- ══════════════════════ PAGE MÉTIER ══════════════════════ -->
 <div id="page-metier" class="page">
   <div class="metier-page" id="metier-content"></div>
   <footer>
@@ -365,56 +410,305 @@
 
 <script>
 const DATA = {
-  pentester:{tag:'Cybersécurité',tc:'tag-cyber',title:'Pentester — Testeur d\'intrusion',
-    intro:'Le pentester est un hacker légal. Son client lui demande d\'attaquer ses propres systèmes — site web, réseau, applications — pour trouver les failles avant que de vrais attaquants ne le fassent. C\'est un métier technique, varié, et parmi les mieux payés du secteur. Il existe en freelance ou en entreprise (ESN, cabinet de conseil, banque, défense).',
-    infos:[{l:'Salaire junior',v:'35–42k€',s:'0–2 ans, première embauche'},{l:'Salaire confirmé',v:'45–58k€',s:'3–5 ans d\'expérience'},{l:'Salaire senior/freelance',v:'60–70k€+',s:'5 ans+ ou indépendant'},{l:'Tension du marché',v:'Très forte',s:'Beaucoup plus d\'offres que de candidats'}],
-    journee:'Le matin, prise de connaissance d\'une mission : tester la sécurité d\'une application web bancaire. Phase de reconnaissance : cartographier l\'application, identifier les technologies. L\'après-midi : tentatives d\'attaques contrôlées — injection SQL, contournement d\'authentification. Le soir : rédaction du rapport avec les failles trouvées et les recommandations de correction. Pas de routine : chaque mission sur un nouveau système.',
-    skills:['<strong>Réseaux et systèmes</strong> : TCP/IP, Linux, Active Directory','<strong>Scripting</strong> : Python ou Bash pour automatiser les tests','<strong>Outils offensifs</strong> : Nmap, Burp Suite, Metasploit, Wireshark','<strong>Web</strong> : HTTP, API, fonctionnement des applications web','<strong>Rédaction</strong> : écrire des rapports compréhensibles pour des non-techniques'],
-    parcours:[{n:'01',t:'Bases réseaux et systèmes',d:'Comprendre IP, TCP, DNS, HTTP. Linux. Sans ça impossible de progresser. Cours gratuit : OpenClassrooms "Les réseaux de zéro".',dur:'1–2 mois'},{n:'02',t:'Initiation Linux + ligne de commande',d:'La majorité des outils tournent sous Linux. Installe Ubuntu ou Kali en machine virtuelle (gratuit via VirtualBox).',dur:'2–4 semaines'},{n:'03',t:'Parcours TryHackMe "Pre-Security"',d:'Plateforme d\'entraînement avec des machines à pirater légalement. Commence par "Pre-Security" puis "Junior Pentester".',dur:'2–3 mois'},{n:'04',t:'Certification eJPT',d:'eLearnSecurity Junior Penetration Tester — la certification d\'entrée la plus reconnue. Examen pratique. ~200€.',dur:'1 mois de préparation'},{n:'05',t:'Pratiquer sur HackTheBox',d:'Plus difficile que TryHackMe. Résoudre 10–15 machines HackTheBox te met au niveau pour postuler.',dur:'3–6 mois'},{n:'06',t:'Postuler en alternance ou stage',d:'Capgemini, Thales, Orange Cyberdefense, Wavestone recrutent des profils juniors. Tes labs et certifs font office de portfolio.',dur:'Continu'}],
-    formations:[{n:'TryHackMe',t:'Plateforme en ligne',c:'Gratuit / 14€/mois',d:'Libre',note:'★ Idéal pour commencer',nc:'note-green'},{n:'eJPT — eLearnSecurity',t:'Certification pratique',c:'~200€',d:'1 mois de prépa',note:'★ Première certif à viser',nc:'note-green'},{n:'OSCP — Offensive Security',t:'Certification référence',c:'1 499$',d:'6–12 mois de prépa',note:'★ Ouvre toutes les portes',nc:'note-green'},{n:'Bootcamp Jedha / Guardia',t:'Formation intensive',c:'6 000–9 000€',d:'3–6 mois',note:'⚠ Finançable CPF, vérifier contenu',nc:'note-orange'},{n:'Bachelor Cybersécurité (école)',t:'Diplôme bac+3',c:'5 000–8 000€/an',d:'1–3 ans',note:'★ Alternance possible',nc:'note-green'}],
-    ressources:[{t:'Plateforme',n:'TryHackMe',d:'Labs guidés pour débutants. Commence par le parcours "Pre-Security".',l:'tryhackme.com'},{t:'Plateforme',n:'HackTheBox',d:'Plus difficile, pour progresser après TryHackMe.',l:'hackthebox.com'},{t:'Certification',n:'eJPT — eLearnSecurity',d:'La première certif à viser. Examen pratique, reconnue par les recruteurs.',l:'elearnsecurity.com'},{t:'Outil gratuit',n:'Kali Linux',d:'Distribution Linux avec tous les outils de sécurité préinstallés.',l:'kali.org'}],
-    guide:'Commence par TryHackMe gratuit ce soir même — pas besoin d\'installer quoi que ce soit. 30 minutes par soir, 5 jours par semaine. En 6 mois tu as le niveau pour postuler à un premier poste junior ou une alternance.'
-  },
-  rssi:{tag:'Management',tc:'tag-metier',title:'RSSI — Responsable Sécurité des Systèmes d\'Information',
-    intro:'Le RSSI est le chef d\'orchestre de la sécurité informatique dans une organisation. Il ne hack pas — il décide. Il définit la politique de sécurité, gère les budgets, coordonne les équipes techniques et rend des comptes à la direction. C\'est un poste senior, accessible après 5 à 8 ans d\'expérience dans d\'autres métiers de la cyber.',
-    infos:[{l:'Salaire junior RSSI',v:'55–65k€',s:'Petite structure, première prise de poste'},{l:'Salaire entreprise moyenne',v:'70–85k€',s:'ETI, 3–5 ans dans le rôle'},{l:'Salaire grand groupe',v:'90–110k€',s:'CAC 40, secteur bancaire / défense'},{l:'Expérience requise',v:'5–8 ans',s:'On ne devient pas RSSI en sortie d\'école'}],
-    journee:'Le matin : réunion avec la DSI pour valider le budget annuel sécurité. Midi : présentation au COMEX d\'un rapport sur les risques cyber. Après-midi : revue des incidents de la semaine avec l\'équipe SOC, validation d\'un nouveau prestataire d\'audit. Fin de journée : réponse à un questionnaire de conformité RGPD. Très peu de technique, beaucoup de stratégie et de communication.',
-    skills:['<strong>Gestion des risques</strong> : méthode EBIOS RM, ISO 27001/27002','<strong>Cadres réglementaires</strong> : RGPD, directive NIS2','<strong>Management</strong> : gérer une équipe de 2 à 20 personnes','<strong>Communication</strong> : parler sécurité à des non-techniques (direction, clients)','<strong>Budget</strong> : justifier les investissements sécurité en termes business'],
-    parcours:[{n:'01',t:'Commencer par un métier technique',d:'Analyste SOC, pentester, admin sécurité. Le RSSI vient toujours d\'un background technique.',dur:'3–5 ans'},{n:'02',t:'Certification ISO 27001 Lead Implementer',d:'La certification de référence pour comprendre les systèmes de management de la sécurité.',dur:'3–6 mois'},{n:'03',t:'Se former à la gestion de risques EBIOS RM',d:'Méthode française imposée par l\'ANSSI. Formation disponible sur cyber.gouv.fr (gratuit).',dur:'1–2 mois'},{n:'04',t:'Certif CISSP ou CISM',d:'Certifications internationales de management. CISSP (ISC²) ou CISM (ISACA) — très demandées en grande entreprise.',dur:'6–12 mois'},{n:'05',t:'Prendre un rôle de lead / chef de projet',d:'Avant RSSI, passer par la responsabilité d\'une équipe ou d\'un projet de sécurité.',dur:'2–3 ans'}],
-    formations:[{n:'ISO 27001 Lead Implementer',t:'Certification',c:'2 000–3 500€',d:'5 jours + examen',note:'★ Référence du secteur',nc:'note-green'},{n:'CISSP — ISC²',t:'Certification internationale',c:'699$ examen',d:'6–12 mois autoformation',note:'★ Très reconnue mondialement',nc:'note-green'},{n:'CISM — ISACA',t:'Certification management',c:'575–760$',d:'4–8 mois autoformation',note:'★ Orientée management',nc:'note-green'},{n:'MBA Cybersécurité',t:'École de management',c:'10 000–25 000€',d:'1–2 ans',note:'⚠ Optionnel et coûteux',nc:'note-orange'}],
-    ressources:[{t:'Guide officiel',n:'ANSSI — Guides RSSI',d:'L\'ANSSI publie des guides gratuits pour les RSSI. Incontournables et régulièrement mis à jour.',l:'cyber.gouv.fr'},{t:'Certification',n:'CISSP — ISC²',d:'La certification de référence mondiale pour les professionnels sécurité senior.',l:'isc2.org'},{t:'Norme',n:'ISO 27001',d:'La norme internationale de management de la sécurité. Base de toute politique RSSI.',l:'iso.org'},{t:'Communauté',n:'CESIN',d:'Club des Experts de la Sécurité de l\'Information — réseau des RSSI français.',l:'cesin.fr'}],
-    guide:'Le RSSI n\'est pas un point de départ — c\'est une destination. Commence par devenir analyste SOC ou pentester, accumule de l\'expérience, prends des responsabilités, et vise ce rôle à 5–8 ans. Les certifications ISO 27001 et CISSP sont tes jalons.'
-  },
-  soc:{tag:'Surveillance',tc:'tag-intro',title:'Analyste SOC — Security Operations Center',
-    intro:'L\'analyste SOC surveille les systèmes informatiques en temps réel. Il reçoit des milliers d\'alertes par jour, trie les fausses alarmes, identifie les vraies menaces et déclenche la réponse. C\'est le métier d\'entrée le plus accessible dans la cybersécurité — avec une formation de 6 mois et la certification CompTIA Security+, tu peux postuler.',
-    infos:[{l:'Analyste N1 (junior)',v:'32–38k€',s:'Première prise de poste, 0–2 ans'},{l:'Analyste N2 (confirmé)',v:'38–48k€',s:'2–4 ans d\'expérience'},{l:'Analyste N3 / Lead',v:'48–60k€',s:'Expertise + coordination équipe'},{l:'Formation minimale',v:'6 mois',s:'Pour postuler en N1 junior'}],
-    journee:'Prise de poste : revue des alertes de la nuit. Le SIEM (outil de surveillance) a généré 847 alertes — 843 sont des faux positifs. Sur les 4 restantes : 2 sont un employé connecté depuis l\'étranger (normal, il est en déplacement), 1 est un scan automatique bloqué, et 1 est une vraie tentative d\'intrusion. L\'analyste rédige un rapport d\'incident et escalade au N3. Travail en rotation 3x8 avec majorations de nuit.',
-    skills:['<strong>SIEM</strong> : maîtriser Splunk, Microsoft Sentinel ou IBM QRadar','<strong>Analyse de logs</strong> : lire et interpréter des traces système et réseau','<strong>Réseaux</strong> : TCP/IP, savoir lire une capture Wireshark','<strong>Threat intelligence</strong> : connaître les types d\'attaques courantes','<strong>Sang-froid</strong> : gérer la pression lors d\'incidents réels'],
-    parcours:[{n:'01',t:'Bases réseaux et systèmes Linux/Windows',d:'Sans ça, impossible de lire des logs. Cours gratuits sur OpenClassrooms ou YouTube (NetworkChuck).',dur:'1–2 mois'},{n:'02',t:'Parcours SOC Level 1 sur TryHackMe',d:'Parcours complet, gratuit, guidé — parfait pour débutant complet. Inclut les bases du monitoring.',dur:'4–6 semaines'},{n:'03',t:'Formation Splunk Fundamentals 1',d:'Splunk offre une formation gratuite. C\'est le SIEM le plus demandé dans les offres d\'emploi SOC.',dur:'3–5 jours'},{n:'04',t:'Certification CompTIA Security+',d:'La certification d\'entrée la plus reconnue. Valide tes bases théoriques. ~370$.',dur:'2–3 mois de préparation'},{n:'05',t:'Postuler en SOC N1',d:'Avec Security+ et les labs TryHackMe, tu peux postuler. Atos, Sopra, Orange Cyberdefense, Capgemini recrutent massivement.',dur:'Dès 6 mois de travail'}],
-    formations:[{n:'TryHackMe — SOC Level 1',t:'Parcours en ligne',c:'Gratuit / 14€/mois',d:'2–3 mois',note:'★ Parfait pour débuter',nc:'note-green'},{n:'Splunk Fundamentals 1',t:'Formation officielle',c:'Gratuit',d:'3–5 jours',note:'★ Incontournable',nc:'note-green'},{n:'CompTIA Security+',t:'Certification',c:'~370$',d:'2–3 mois autoformation',note:'★ Très demandée en N1',nc:'note-green'},{n:'BTS SIO option SISR',t:'Formation nationale',c:'Gratuit en lycée public',d:'2 ans',note:'★ Bonne base généraliste',nc:'note-green'},{n:'Bootcamp Cybersécurité',t:'Formation intensive',c:'6 000–9 000€',d:'3–6 mois',note:'⚠ Vérifier le taux d\'insertion',nc:'note-orange'}],
-    ressources:[{t:'Plateforme',n:'TryHackMe — SOC Level 1',d:'Parcours complet pour devenir analyste SOC. Guidé, progressif, adapté aux débutants.',l:'tryhackme.com'},{t:'Outil',n:'Splunk Free Training',d:'Formation officielle gratuite sur le SIEM le plus utilisé en entreprise.',l:'education.splunk.com'},{t:'Certification',n:'CompTIA Security+',d:'La certification d\'entrée de référence. Reconnue par la quasi-totalité des employeurs.',l:'comptia.org'},{t:'Référentiel',n:'MITRE ATT&CK',d:'Base de données mondiale des techniques d\'attaque. L\'outil de référence des analystes SOC.',l:'attack.mitre.org'}],
-    guide:'C\'est le meilleur point d\'entrée dans la cyber. Commence par TryHackMe SOC Level 1 (gratuit), passe la Security+ (~370$), et postule. Le marché est tellement en tension que les employeurs forment eux-mêmes leurs N1.'
-  },
-  forensic:{tag:'Investigation',tc:'tag-cyber',title:'Analyste Forensic — Enquêteur numérique',
-    intro:'L\'analyste forensic intervient après une cyberattaque pour reconstituer exactement ce qui s\'est passé — qui a attaqué, comment, quand, quelles données ont été volées. Il travaille pour des entreprises, des cabinets d\'avocats, des assureurs, et parfois pour la police (C3N) et la gendarmerie. Profil rare, très recherché.',
-    infos:[{l:'Salaire junior',v:'38–44k€',s:'Cabinet de conseil, ESN spécialisée'},{l:'Salaire confirmé',v:'45–58k€',s:'3–5 ans, dossiers complexes'},{l:'Expert judiciaire',v:'55–70k€+',s:'Mission indépendante + honoraires'},{l:'Profil sur le marché',v:'Très rare',s:'Peu de candidats formés en France'}],
-    journee:'Une entreprise appelle : ransomware cette nuit. L\'analyste se déplace avec son matériel (disques d\'acquisition, PC forensic). Il "gèle" la scène : copies exactes des disques et de la RAM sans modifier les originaux. Retour bureau : analyse des copies avec Autopsy et Volatility. Il retrouve la timeline d\'infection, identifie le point d\'entrée (email de phishing ouvert 3 jours avant l\'attaque). Rédige un rapport technique et une synthèse pour la direction.',
-    skills:['<strong>Systèmes de fichiers</strong> : NTFS, ext4 — ce qui reste après suppression d\'un fichier','<strong>Outils forensic</strong> : Autopsy, FTK, Volatility pour l\'analyse mémoire','<strong>Malware analysis</strong> : comprendre le comportement d\'un virus','<strong>Réseaux</strong> : analyser des captures de trafic (Wireshark)','<strong>Rigueur juridique</strong> : les preuves doivent être collectées pour être recevables'],
-    parcours:[{n:'01',t:'Maîtriser Linux et les systèmes de fichiers',d:'La base du forensic. Comprendre comment un OS stocke les données et ce qui reste après suppression.',dur:'1–2 mois'},{n:'02',t:'Apprendre Autopsy (gratuit)',d:'Autopsy est l\'outil forensic open-source de référence. Tutoriels gratuits sur YouTube et dfir.training.',dur:'3–4 semaines'},{n:'03',t:'Pratiquer sur Cyberdefenders et Root-Me',d:'Cas pratiques d\'investigation forensic avec de vrais fichiers à analyser. Root-Me est en français.',dur:'2–4 mois'},{n:'04',t:'Certification GCFE ou GCFA (GIAC)',d:'Les certifications forensic les plus reconnues. GCFE pour débuter, GCFA pour le niveau avancé.',dur:'3–6 mois'},{n:'05',t:'Viser les cabinets ou la gendarmerie',d:'Cabinets : Intrinsec, Sekoia, KPMG Cyber. Secteur public : C3N (gendarmerie), BL2S (police).',dur:'Après certif'}],
-    formations:[{n:'Cyberdefenders (labs)',t:'Plateforme forensics',c:'Gratuit / 30$/mois',d:'Libre',note:'★ Cas pratiques réels',nc:'note-green'},{n:'Root-Me (section forensics)',t:'Plateforme française',c:'Gratuit',d:'Libre',note:'★ En français, progressif',nc:'note-green'},{n:'GCFE — GIAC Forensics',t:'Certification',c:'~949$',d:'3–6 mois de préparation',note:'★ Référence du secteur',nc:'note-green'},{n:'Formation SANS Institute',t:'Formation intensive pro',c:'4 000–6 000$',d:'1 semaine intensive',note:'⚠ Très cher mais le top mondial',nc:'note-orange'}],
-    ressources:[{t:'Plateforme',n:'Cyberdefenders',d:'Labs d\'investigation forensic avec des cas réels. Parfait pour pratiquer.',l:'cyberdefenders.org'},{t:'Plateforme',n:'Root-Me (forensics)',d:'Plateforme française avec des challenges progressifs. Gratuit.',l:'root-me.org'},{t:'Outil gratuit',n:'Autopsy',d:'L\'outil forensic open-source de référence. Utilisé par les pros et les forces de l\'ordre.',l:'autopsy.com'},{t:'Outil gratuit',n:'Volatility',d:'Pour analyser la mémoire RAM et retrouver ce qui tournait pendant l\'attaque.',l:'volatilityfoundation.org'}],
-    guide:'Commence par Root-Me section "Forensics" (gratuit, en français). Installe Autopsy et entraîne-toi sur des images disque d\'exercice. Ce métier est rare — peu de gens le font, donc les opportunités sont réelles pour ceux qui se forment.'
-  },
-  devsecops:{tag:'Développement',tc:'tag-metier',title:'Ingénieur DevSecOps',
-    intro:'Le DevSecOps intègre la sécurité directement dans le cycle de développement logiciel. Alors qu\'autrefois la sécurité était vérifiée en fin de projet, il la met dès le premier jour. Il automatise les tests de sécurité, configure les pipelines CI/CD, et forme les développeurs aux bonnes pratiques. C\'est le profil le plus demandé des startups et scale-ups tech en 2025. Prérequis : savoir coder.',
-    infos:[{l:'Salaire junior',v:'42–50k€',s:'Avec background dev ou ops'},{l:'Salaire confirmé',v:'52–65k€',s:'3–4 ans d\'expérience'},{l:'Salaire senior / lead',v:'65–80k€',s:'Architecte sécurité cloud'},{l:'Prérequis non négociable',v:'Savoir coder',s:'Python, Go, ou autre langage'}],
-    journee:'Matin : une équipe dev vient de pousser du code. Un scanner automatique (SAST) détecte une injection SQL potentielle. L\'ingénieur analyse l\'alerte, la confirme, bloque le déploiement. Il explique la faille au développeur et valide la correction. Après-midi : configuration d\'un nouveau scanner dans le pipeline CI/CD. Fin de journée : formation d\'1h avec l\'équipe dev sur les erreurs de sécurité les plus fréquentes.',
-    skills:['<strong>Développement</strong> : savoir coder (Python, Go) — non négociable','<strong>CI/CD</strong> : GitLab CI, GitHub Actions, Jenkins','<strong>Conteneurisation</strong> : Docker, Kubernetes et leur sécurisation','<strong>Outils SAST/DAST</strong> : SonarQube, OWASP ZAP, Snyk','<strong>Cloud security</strong> : AWS, Azure ou GCP et leurs configurations sécurisées'],
-    parcours:[{n:'01',t:'Apprendre à développer en Python',d:'Sans bases en dev, le DevSecOps est inaccessible. Python est le plus utile. Cours gratuit : "Python pour tous" sur Coursera.',dur:'3–6 mois'},{n:'02',t:'Linux et conteneurs Docker',d:'Docker est incontournable. Formation gratuite sur docs.docker.com. Ensuite Kubernetes.',dur:'1–2 mois'},{n:'03',t:'CI/CD avec GitLab (gratuit)',d:'Crée ton premier pipeline qui build, teste et scanne du code automatiquement. Tutoriel officiel GitLab.',dur:'3–4 semaines'},{n:'04',t:'OWASP Top 10',d:'La liste des 10 failles web les plus critiques. La lire et la comprendre est la base du DevSecOps.',dur:'1–2 semaines'},{n:'05',t:'Certification AWS Security Specialty',d:'Si tu vises les startups cloud-native, c\'est la certif à avoir. La majorité tourne sur AWS.',dur:'3–5 mois'}],
-    formations:[{n:'Python pour tous — Coursera',t:'MOOC gratuit',c:'Gratuit (audit)',d:'2–3 mois',note:'★ Base indispensable',nc:'note-green'},{n:'OWASP DevSecOps Guideline',t:'Guide gratuit',c:'Gratuit',d:'Lecture + pratique',note:'★ Référence mondiale',nc:'note-green'},{n:'AWS Security Specialty',t:'Certification cloud',c:'~300$',d:'3–5 mois de préparation',note:'★ Très demandée startups',nc:'note-green'},{n:'Licence Pro DevOps',t:'Université publique',c:'~400€/an',d:'1 an (après bac+2)',note:'★ Accessible et finançable',nc:'note-green'},{n:'Bootcamp DevOps',t:'Formation intensive',c:'5 000–12 000€',d:'3–6 mois',note:'⚠ Vérifier le volet sécurité',nc:'note-orange'}],
-    ressources:[{t:'Référentiel',n:'OWASP Top 10',d:'La liste des 10 failles web les plus critiques. La bible du DevSecOps.',l:'owasp.org'},{t:'Outil gratuit',n:'Snyk',d:'Scanner de vulnérabilités dans les dépendances de code. Gratuit pour les projets persos.',l:'snyk.io'},{t:'Plateforme',n:'GitLab CI (gratuit)',d:'Crée ton premier pipeline de sécurité automatisé. Tutoriel officiel disponible.',l:'gitlab.com'},{t:'Guide',n:'OWASP DevSecOps',d:'Guides et ressources de la communauté mondiale DevSecOps. Tout est gratuit.',l:'owasp.org'}],
-    guide:'Si tu ne sais pas coder, commence par Python (Coursera, gratuit). Si tu sais déjà coder, commence par lire l\'OWASP Top 10 (30 min) et installe Snyk sur un projet perso ce soir. C\'est le métier avec la plus forte croissance salariale des 3 prochaines années.'
-  }
+
+pentester:{
+  tag:'Cybersécurité',tc:'tag-cyber',
+  title:'Pentester — Le hacker légal',
+  intro:'Le pentester (qu\'on appelle aussi "testeur d\'intrusion" ou "hacker éthique") a le métier de rêve de beaucoup de passionnés de sécurité : il est payé pour essayer de pirater des systèmes. Mais attention — il le fait avec l\'autorisation de ses clients, pour les aider à se protéger. C\'est complètement légal, très demandé, et parmi les métiers les mieux rémunérés du secteur tech.',
+  infos:[
+    {l:'Salaire junior',v:'35–42k€',s:'Première embauche, 0–2 ans'},
+    {l:'Salaire confirmé',v:'45–58k€',s:'3–5 ans d\'expérience'},
+    {l:'Salaire senior / freelance',v:'60–70k€+',s:'5 ans+ ou à son compte'},
+    {l:'Offres d\'emploi',v:'Très nombreuses',s:'Toujours plus d\'offres que de candidats'}
+  ],
+  journee:'Imagine que tu travailles pour une grande banque. Ton patron te dit : "Essaie de pénétrer notre site internet comme si tu étais un criminel. Trouve tous les endroits mal protégés." C\'est exactement ce que fait un pentester. Il passe sa journée à chercher les "portes mal fermées" d\'un système informatique. Le matin, il explore méthodiquement le site cible — comme un détective qui cherche des indices. L\'après-midi, il teste des méthodes pour entrer là où il n\'aurait pas dû pouvoir. Le soir, il rédige un rapport clair expliquant ce qu\'il a trouvé et comment le réparer. Chaque semaine, une nouvelle mission dans un nouveau secteur. Jamais la même routine.',
+  skills:[
+    '<strong>Comprendre les réseaux</strong> : savoir comment les ordinateurs communiquent entre eux (comme comprendre les routes pour savoir quel chemin emprunter)',
+    '<strong>Linux</strong> : maîtriser ce système d\'exploitation gratuit qu\'utilisent la quasi-totalité des outils de sécurité',
+    '<strong>Programmation simple</strong> : écrire de petits programmes pour automatiser des tâches répétitives',
+    '<strong>Outils de test</strong> : utiliser des logiciels spécialisés qui aident à trouver les failles (tout ça s\'apprend)',
+    '<strong>Communication écrite</strong> : rédiger des rapports clairs pour des clients qui ne comprennent pas forcément la technique'
+  ],
+  parcours:[
+    {n:'01',t:'Comprendre comment fonctionne internet',d:'Avant tout, il faut comprendre les bases : comment les données voyagent d\'un ordinateur à un autre. Pas besoin d\'être expert — juste comprendre le principe. Cours gratuit recommandé : "Les réseaux de zéro" sur OpenClassrooms.',dur:'1–2 mois'},
+    {n:'02',t:'Apprivoiser Linux',d:'Linux est un système d\'exploitation (comme Windows mais différent) utilisé par presque tous les outils de cybersécurité. C\'est gratuit à installer et ça s\'apprend progressivement. Pas de panique — tout le monde part de zéro.',dur:'3–4 semaines'},
+    {n:'03',t:'S\'entraîner sur TryHackMe',d:'TryHackMe est une plateforme en ligne où tu peux t\'entraîner à pirater des systèmes légalement — dans un environnement sécurisé créé pour ça. C\'est comme un jeu vidéo éducatif. Commence par le parcours "Pre-Security", c\'est fait pour les vrais débutants.',dur:'2–3 mois'},
+    {n:'04',t:'Passer ta première certification',d:'La certification eJPT est le premier "diplôme" reconnu en pentesting. C\'est un examen pratique (pas de QCM) où tu dois pirater de vraies machines. Elle prouve tes compétences aux recruteurs. Coût : environ 200€.',dur:'1 mois de préparation'},
+    {n:'05',t:'Progresser vers les défis avancés',d:'HackTheBox est la prochaine étape après TryHackMe — des exercices plus difficiles, plus proches du travail réel. Résoudre 10 à 15 exercices te met au niveau pour postuler à ton premier poste.',dur:'3–6 mois'},
+    {n:'06',t:'Postuler ou viser une formation longue',d:'Avec tes bases solides, tu peux soit postuler directement (Capgemini, Thales, Orange Cyberdefense recrutent des juniors), soit continuer en école ou en master pour viser des postes plus seniors. Les deux chemins sont valides.',dur:'Selon ton projet'}
+  ],
+  formations:[
+    {n:'TryHackMe (plateforme en ligne)',t:'Auto-formation gamifiée',c:'Gratuit / 14€/mois',d:'À ton rythme',note:'★ Commencer ici',nc:'note-green'},
+    {n:'eJPT — Première certification',t:'Examen pratique reconnu',c:'~200€',d:'1 mois de prépa',note:'★ Premier diplôme à viser',nc:'note-green'},
+    {n:'BTS SIO (lycée public)',t:'Formation initiale bac+2',c:'Gratuit',d:'2 ans',note:'★ Bonne base, prise en charge',nc:'note-green'},
+    {n:'Licence Pro Cybersécurité',t:'Université publique',c:'~400€/an',d:'1 an après bac+2',note:'★ Peu cher, reconnu',nc:'note-green'},
+    {n:'Bachelor Cybersécurité (école)',t:'Formation spécialisée bac+3',c:'5 000–8 000€/an',d:'1 à 3 ans',note:'⚠ Alternance possible = gratuit',nc:'note-orange'},
+    {n:'Master Cybersécurité (université)',t:'Diplôme bac+5 public',c:'~500€/an',d:'2 ans après licence',note:'★ Meilleur rapport qualité/prix',nc:'note-green'},
+    {n:'Mastère spécialisé (grande école)',t:'Bac+6, très reconnu',c:'10 000–20 000€',d:'1–2 ans',note:'⚠ Coûteux, ouvre portes senior',nc:'note-orange'},
+    {n:'OSCP — Certification avancée',t:'Référence mondiale du secteur',c:'1 499$',d:'Prépa 6–12 mois',note:'★ Objectif à 2–3 ans',nc:'note-green'}
+  ],
+  ecoles:[
+    {n:'IUT Réseaux & Télécoms',det:'BUT Informatique option cybersécurité',niv:'Bac+3',dur:'3 ans',cout:'~400€/an'},
+    {n:'Université (licence + master)',det:'Parcours Sécurité Informatique',niv:'Bac+5',dur:'5 ans',cout:'~500€/an'},
+    {n:'EPITA / EPITECH',det:'École d\'ingénieur spécialisée tech',niv:'Bac+5',dur:'5 ans',cout:'8 000–10 000€/an'},
+    {n:'ESIEA / INSA',det:'École d\'ingénieur généraliste + spécialité sécu',niv:'Bac+5',dur:'5 ans',cout:'6 000–9 000€/an'},
+    {n:'Guardia Cybersecurity School',det:'École 100% cybersécurité',niv:'Bac+3 à Bac+5',dur:'3 à 5 ans',cout:'7 000–9 000€/an'},
+    {n:'Mastère RSSI (grandes écoles)',det:'Sciences Po, HEC, ESSEC + module cyber',niv:'Bac+6',dur:'1–2 ans',cout:'15 000–25 000€'}
+  ],
+  ressources:[
+    {t:'Plateforme d\'entraînement',n:'TryHackMe',d:'La meilleure façon de commencer. Gratuit, guidé, progressif. Fais le parcours "Pre-Security" en premier.',l:'tryhackme.com'},
+    {t:'Plateforme avancée',n:'HackTheBox',d:'L\'étape suivante après TryHackMe. Des défis plus proches du travail réel.',l:'hackthebox.com'},
+    {t:'Première certification',n:'eJPT — eLearnSecurity',d:'Le premier diplôme reconnu à viser. Examen pratique, environ 200€.',l:'elearnsecurity.com'},
+    {t:'Système d\'exploitation',n:'Kali Linux (gratuit)',d:'Le système d\'exploitation utilisé par les professionnels. Gratuit, à installer en machine virtuelle.',l:'kali.org'}
+  ],
+  guide:'La meilleure façon de commencer ce soir : crée un compte gratuit sur TryHackMe et fais les 10 premières minutes du parcours "Pre-Security". Pas besoin d\'installer quoi que ce soit sur ton ordinateur. 30 minutes par soir, 5 jours par semaine, et dans 6 mois tu auras un niveau suffisant pour postuler à un premier poste junior ou une alternance.'
+},
+
+rssi:{
+  tag:'Management',tc:'tag-metier',
+  title:'RSSI — Le directeur de la sécurité informatique',
+  intro:'Le RSSI (Responsable de la Sécurité des Systèmes d\'Information) est le grand patron de la sécurité informatique dans une organisation. Son rôle : décider comment protéger l\'entreprise, gérer les équipes, les budgets, et répondre directement aux PDG et aux conseils d\'administration. C\'est le poste le plus haut de la filière cybersécurité — accessible après 5 à 8 ans d\'expérience. On ne le devient pas en sortant d\'école, mais c\'est l\'objectif de carrière idéal à long terme.',
+  infos:[
+    {l:'Salaire junior RSSI',v:'55–65k€',s:'Petite entreprise, première prise de poste'},
+    {l:'Salaire entreprise moyenne',v:'70–85k€',s:'Plusieurs années dans le rôle'},
+    {l:'Salaire grand groupe',v:'90–110k€',s:'Grande banque, ministère, CAC 40'},
+    {l:'Années d\'expérience requises',v:'5 à 8 ans',s:'On ne devient pas RSSI en sortant d\'école'}
+  ],
+  journee:'Le RSSI ne passe pas ses journées à faire de la technique — c\'est un manager et un stratège. Imagine-toi dans une grande réunion avec le PDG, en train d\'expliquer : "Voilà les risques qui menacent notre entreprise, voilà comment je propose de les gérer, et voilà combien ça va coûter." L\'après-midi, tu rencontres ton équipe pour faire le point sur les incidents de la semaine. Tu valides le choix d\'un nouveau prestataire de sécurité. Tu répondras en fin de journée à un questionnaire réglementaire — parce que les entreprises ont des obligations légales en matière de protection des données. C\'est un métier de décision, de communication et de leadership.',
+  skills:[
+    '<strong>Comprendre les risques</strong> : savoir identifier ce qui peut arriver et évaluer la gravité — comme un chef de projet gère les risques d\'un chantier',
+    '<strong>La réglementation</strong> : connaître les lois qui obligent les entreprises à protéger les données personnelles (RGPD, directives européennes)',
+    '<strong>Manager une équipe</strong> : diriger des ingénieurs, des analystes, des prestataires',
+    '<strong>Parler aux non-techniques</strong> : expliquer des sujets complexes à des directeurs financiers ou des actionnaires qui ne connaissent rien à l\'informatique',
+    '<strong>Gérer un budget</strong> : décider comment dépenser l\'argent alloué à la sécurité de façon intelligente'
+  ],
+  parcours:[
+    {n:'01',t:'D\'abord, un métier technique (obligatoire)',d:'On ne devient jamais RSSI directement. Il faut d\'abord travailler comme analyste, technicien ou ingénieur sécurité pendant 3 à 5 ans. C\'est la règle non négociable du secteur.',dur:'3–5 ans'},
+    {n:'02',t:'Se former à la gestion des risques',d:'Il existe une méthode officielle française appelée EBIOS RM, créée par l\'ANSSI (l\'agence nationale de cybersécurité). Sa formation est disponible gratuitement en ligne. C\'est le langage que parlent tous les RSSI.',dur:'1–2 mois'},
+    {n:'03',t:'Passer la certification ISO 27001',d:'L\'ISO 27001 est une norme internationale qui définit comment bien gérer la sécurité dans une entreprise. La certification "Lead Implementer" montre que tu sais la mettre en place. C\'est le sésame du RSSI.',dur:'3–6 mois'},
+    {n:'04',t:'Viser la certification CISSP ou CISM',d:'Ce sont deux certifications internationales de management de la sécurité, reconnues dans le monde entier. Le CISSP est le plus connu — c\'est un peu le "bac+5" de la cybersécurité en termes de reconnaissance.',dur:'6–12 mois'},
+    {n:'05',t:'Prendre des responsabilités managériales',d:'Avant d\'être RSSI, il faut avoir géré une équipe ou piloté un gros projet de sécurité. C\'est ce qui fait la différence dans un recrutement.',dur:'2–3 ans'}
+  ],
+  formations:[
+    {n:'BTS SIO puis Licence Pro',t:'Parcours public accessible',c:'Quasi gratuit',d:'3 ans total',note:'★ Bon point de départ',nc:'note-green'},
+    {n:'Master Sécurité Informatique (université)',t:'Diplôme bac+5 public',c:'~500€/an',d:'5 ans depuis le bac',note:'★ Meilleur rapport qualité/prix',nc:'note-green'},
+    {n:'École d\'ingénieur + spécialité cyber',t:'Diplôme bac+5 reconnu',c:'Gratuit si alternance',d:'5 ans',note:'★ Très reconnu en entreprise',nc:'note-green'},
+    {n:'ISO 27001 Lead Implementer',t:'Certification professionnelle',c:'2 000–3 500€',d:'5 jours + examen',note:'★ Indispensable pour RSSI',nc:'note-green'},
+    {n:'CISSP — ISC²',t:'Certification internationale',c:'699$ (examen)',d:'6–12 mois d\'auto-formation',note:'★ Référence mondiale',nc:'note-green'},
+    {n:'MBA ou Mastère RSSI (grande école)',t:'Formation executive senior',c:'10 000–25 000€',d:'1–2 ans',note:'⚠ Optionnel mais valorisant',nc:'note-orange'}
+  ],
+  ecoles:[
+    {n:'Université — Master Cybersécurité',det:'Parcours Sécurité des Systèmes d\'Information',niv:'Bac+5',dur:'5 ans depuis le bac',cout:'~500€/an'},
+    {n:'École d\'ingénieur publique (INSA, Polytech...)',det:'Diplôme ingénieur + spécialité sécu',niv:'Bac+5',dur:'5 ans',cout:'Gratuit ou faible'},
+    {n:'Télécom Paris / Télécom SudParis',det:'Spécialité Réseaux et Sécurité',niv:'Bac+5',dur:'3 ans après prépa ou BUT',cout:'~600€/an'},
+    {n:'Sciences Po + module Cyber',det:'Double compétence droit/management + cyber',niv:'Bac+5 à Bac+6',dur:'2 ans après bac+3',cout:'12 000–18 000€'},
+    {n:'Mastère RSSI (grandes écoles)',det:'HEC, ESSEC, EDHEC + volet cybersécurité',niv:'Bac+6',dur:'1–2 ans',cout:'15 000–25 000€'}
+  ],
+  ressources:[
+    {t:'Guide officiel gratuit',n:'ANSSI — Guides RSSI',d:'L\'agence nationale de cybersécurité publie des guides gratuits pour comprendre le rôle de RSSI. C\'est la référence française.',l:'cyber.gouv.fr'},
+    {t:'Certification mondiale',n:'CISSP — ISC²',d:'La certification la plus reconnue pour les managers de la sécurité. À viser après 5 ans d\'expérience.',l:'isc2.org'},
+    {t:'Norme internationale',n:'ISO 27001',d:'La norme qui définit comment bien gérer la sécurité en entreprise. Tout RSSI doit la connaître.',l:'iso.org'},
+    {t:'Réseau professionnel',n:'CESIN',d:'Le club des RSSI français. Pour comprendre le métier de l\'intérieur avant d\'y entrer.',l:'cesin.fr'}
+  ],
+  guide:'Le RSSI n\'est pas un point de départ — c\'est une destination à 8 ou 10 ans de carrière. Le meilleur chemin : commencer par analyste SOC ou technicien réseau, évoluer vers des responsabilités, passer l\'ISO 27001 et le CISSP en cours de route. Les entreprises cherchent des RSSI qui ont "vécu" la technique, pas des managers qui n\'ont jamais vu une alerte de sécurité de leur vie.'
+},
+
+soc:{
+  tag:'Surveillance',tc:'tag-intro',
+  title:'Analyste SOC — La sentinelle du numérique',
+  intro:'L\'analyste SOC (qui vient de "Security Operations Center", c\'est-à-dire "centre d\'opérations de sécurité") est la personne qui surveille les systèmes informatiques d\'une organisation en temps réel — comme un agent de sécurité qui surveille des écrans de caméra, mais pour les données numériques. C\'est le métier le plus accessible pour commencer dans la cybersécurité : avec 6 mois de formation sérieuse et une certification, tu peux postuler à ton premier poste.',
+  infos:[
+    {l:'Analyste junior (niveau 1)',v:'32–38k€',s:'Première embauche, 0–2 ans'},
+    {l:'Analyste confirmé (niveau 2)',v:'38–48k€',s:'2–4 ans d\'expérience'},
+    {l:'Analyste expert (niveau 3)',v:'48–60k€',s:'Expertise pointue ou coordination'},
+    {l:'Formation pour commencer',v:'6 mois',s:'Avec une formation sérieuse et une certif'}
+  ],
+  journee:'Imagine que tu travailles dans une salle remplie d\'écrans où s\'affichent en permanence les activités de milliers d\'ordinateurs d\'une grande entreprise. Ton rôle : repérer quand quelque chose d\'anormal se passe. Par exemple, si un employé se connecte à 3h du matin depuis un pays étranger alors qu\'il ne voyage pas — c\'est suspect. Ou si un ordinateur commence à envoyer des données vers un serveur inconnu. Tu reçois des dizaines d\'alertes par jour. La plupart sont de fausses alarmes (un employé qui a oublié son mot de passe, par exemple). Mais parfois, il y en a une vraie — et là, tu déclenches la procédure d\'urgence. Le travail se fait en rotation : matin, après-midi, nuit. Avec des majorations de salaire pour les nuits et week-ends.',
+  skills:[
+    '<strong>Lire des données de surveillance</strong> : comprendre ce que racontent les journaux d\'activité des systèmes — comme lire des rapports de sécurité',
+    '<strong>Connaître les types d\'attaques</strong> : savoir reconnaître les façons courantes dont les criminels essaient de s\'introduire dans un système',
+    '<strong>Utiliser un outil de surveillance (SIEM)</strong> : les grandes entreprises utilisent des logiciels spéciaux qui centralisent toutes les alertes. Splunk est le plus populaire — sa formation de base est gratuite',
+    '<strong>Réagir vite et avec méthode</strong> : quand une vraie attaque se produit, il faut suivre une procédure précise sans paniquer',
+    '<strong>Rédiger des rapports clairs</strong> : documenter chaque incident pour que l\'équipe puisse apprendre et s\'améliorer'
+  ],
+  parcours:[
+    {n:'01',t:'Apprendre les bases de l\'informatique et des réseaux',d:'Comment les ordinateurs communiquent entre eux, comment fonctionne internet. Pas besoin d\'être un génie — juste comprendre les grands principes. Cours gratuit recommandé : OpenClassrooms "Les réseaux de zéro".',dur:'1–2 mois'},
+    {n:'02',t:'Faire le parcours SOC sur TryHackMe',d:'TryHackMe propose un parcours "SOC Level 1" spécialement conçu pour les débutants qui veulent devenir analyste SOC. C\'est gratuit (ou 14€/mois pour l\'accès premium) et entièrement guidé.',dur:'4–6 semaines'},
+    {n:'03',t:'Apprendre Splunk (l\'outil de surveillance)',d:'Splunk est le logiciel de surveillance le plus utilisé dans les entreprises. Splunk propose une formation gratuite officielle appelée "Splunk Fundamentals 1". Trois à cinq jours de cours en ligne, et tu as les bases.',dur:'3–5 jours'},
+    {n:'04',t:'Passer la certification CompTIA Security+',d:'C\'est la certification d\'entrée la plus reconnue dans le monde entier pour la cybersécurité. Elle valide que tu as les bases théoriques nécessaires. Quasiment tous les recruteurs la connaissent et la valorisent.',dur:'2–3 mois de préparation'},
+    {n:'05',t:'Postuler à un premier poste',d:'Avec ta formation TryHackMe et ta Security+, tu as le profil pour postuler en analyste SOC niveau 1. Des entreprises comme Atos, Orange Cyberdefense, Sopra, ou Capgemini recrutent constamment. Certaines forment elles-mêmes leurs juniors.',dur:'Dès 6 mois de travail'}
+  ],
+  formations:[
+    {n:'TryHackMe — SOC Level 1',t:'Plateforme en ligne guidée',c:'Gratuit / 14€/mois',d:'2–3 mois',note:'★ Le meilleur départ',nc:'note-green'},
+    {n:'Splunk Fundamentals 1',t:'Formation officielle gratuite',c:'Gratuit',d:'3–5 jours',note:'★ Indispensable',nc:'note-green'},
+    {n:'CompTIA Security+',t:'Certification internationale',c:'~370$',d:'2–3 mois d\'auto-formation',note:'★ Très demandée en junior',nc:'note-green'},
+    {n:'BTS SIO option SISR (lycée public)',t:'Formation nationale initiale',c:'Gratuit',d:'2 ans',note:'★ Bonne base complète',nc:'note-green'},
+    {n:'Licence Pro Sécurité (université)',t:'Diplôme bac+3',c:'~400€/an',d:'1 an après bac+2',note:'★ Accessible, reconnu',nc:'note-green'},
+    {n:'Master Cybersécurité (université)',t:'Diplôme bac+5',c:'~500€/an',d:'2 ans après licence',note:'★ Pour évoluer vers N3 ou RSSI',nc:'note-green'},
+    {n:'Bootcamp Cybersécurité (école privée)',t:'Formation intensive',c:'6 000–9 000€',d:'3–6 mois',note:'⚠ Vérifier le taux d\'insertion',nc:'note-orange'}
+  ],
+  ecoles:[
+    {n:'IUT — BUT Réseaux & Télécoms',det:'Option cybersécurité en 3e année',niv:'Bac+3',dur:'3 ans',cout:'~400€/an'},
+    {n:'Université — Licence Informatique',det:'Puis Master Sécurité des Systèmes',niv:'Bac+5',dur:'5 ans',cout:'~500€/an'},
+    {n:'BTS SIO + Licence Pro + Master',det:'Parcours public complet',niv:'Bac+5',dur:'5 ans',cout:'Quasi gratuit'},
+    {n:'Guardia Cybersecurity School',det:'Bachelor ou Mastère cybersécurité',niv:'Bac+3 ou Bac+5',dur:'3 ou 5 ans',cout:'7 000–9 000€/an'},
+    {n:'EPITA — Majeure Sécurité',det:'École d\'ingénieur spécialisée',niv:'Bac+5',dur:'5 ans',cout:'9 000–11 000€/an'}
+  ],
+  ressources:[
+    {t:'Plateforme d\'entraînement',n:'TryHackMe — SOC Level 1',d:'Parcours complet pour devenir analyste SOC. Gratuit, guidé, parfait pour les débutants.',l:'tryhackme.com'},
+    {t:'Outil professionnel',n:'Splunk Free Training',d:'Formation officielle gratuite sur le logiciel de surveillance le plus utilisé en entreprise.',l:'education.splunk.com'},
+    {t:'Certification d\'entrée',n:'CompTIA Security+',d:'La certification reconnue par tous les recruteurs pour un premier poste en cybersécurité.',l:'comptia.org'},
+    {t:'Base de données des attaques',n:'MITRE ATT&CK',d:'Un catalogue mondial de toutes les façons dont les criminels attaquent les systèmes. La bible de l\'analyste SOC.',l:'attack.mitre.org'}
+  ],
+  guide:'C\'est le meilleur point d\'entrée dans la cyber, et c\'est faisable en moins d\'un an depuis zéro. Commence par TryHackMe SOC Level 1 (gratuit, accessible depuis ton navigateur), puis passe la CompTIA Security+ pour valider tes connaissances. Le marché est tellement en tension que certaines entreprises recrutent des juniors et les forment elles-mêmes — ta motivation compte autant que ton diplôme.'
+},
+
+forensic:{
+  tag:'Investigation',tc:'tag-cyber',
+  title:'Analyste Forensic — Le détective du numérique',
+  intro:'Quand une cyberattaque se produit, quelqu\'un doit mener l\'enquête. L\'analyste forensic, c\'est le détective du monde numérique. Son rôle : comprendre exactement ce qui s\'est passé — comment les criminels sont entrés, ce qu\'ils ont volé, et quelles preuves permettront de les identifier. Il travaille pour des entreprises, des cabinets d\'avocats, des compagnies d\'assurance, mais aussi pour la police nationale et la gendarmerie. C\'est un profil très rare — et donc très recherché.',
+  infos:[
+    {l:'Salaire junior',v:'38–44k€',s:'Cabinet de conseil, ESN spécialisée'},
+    {l:'Salaire confirmé',v:'45–58k€',s:'3–5 ans, dossiers complexes'},
+    {l:'Expert judiciaire indépendant',v:'55–70k€+',s:'Missions pour la justice'},
+    {l:'Rareté du profil',v:'Très rare',s:'Peu de candidats formés en France'}
+  ],
+  journee:'Une entreprise t\'appelle à 8h du matin : elle a été attaquée cette nuit, des données ont été volées, les systèmes sont bloqués. Tu arrives sur place avec ton matériel spécialisé. Ta première mission : ne rien toucher sans faire de copie exacte. Comme un détective de police qui prend des photos avant de toucher une scène de crime. Tu fais des copies parfaites de tous les disques durs et de la mémoire de l\'ordinateur. De retour au bureau, tu analyses ces copies à la recherche d\'indices : à quelle heure les criminels sont entrés, par quelle "porte", quels fichiers ont été pris. Tu remonteras jusqu\'à un email suspect ouvert par un employé trois jours avant l\'attaque. Tu rédigeras ensuite un rapport pour la direction — et peut-être un rapport pour les enquêteurs de police.',
+  skills:[
+    '<strong>Comprendre comment les ordinateurs stockent les données</strong> : savoir ce qui reste sur un disque dur même quand on "supprime" un fichier (spoiler : les données restent souvent)',
+    '<strong>Outils d\'investigation numérique</strong> : des logiciels spécialisés permettent d\'analyser des disques durs entiers à la recherche d\'indices',
+    '<strong>Analyser les comportements suspects</strong> : comprendre ce que faisait un virus ou un attaquant en lisant les traces qu\'il a laissées',
+    '<strong>Rigueur et méthode</strong> : les preuves numériques doivent être collectées d\'une façon très précise pour être utilisables devant un tribunal',
+    '<strong>Rédiger des rapports d\'expertise</strong> : expliquer clairement à des juristes ou des assureurs ce qui s\'est passé techniquement'
+  ],
+  parcours:[
+    {n:'01',t:'Maîtriser Linux et les bases des systèmes',d:'Comprendre comment un ordinateur stocke ses fichiers, ce qui se passe quand on supprime quelque chose. C\'est la base absolue de l\'investigation numérique.',dur:'1–2 mois'},
+    {n:'02',t:'Découvrir Autopsy (outil gratuit)',d:'Autopsy est le logiciel d\'investigation numérique le plus utilisé — et il est entièrement gratuit. Des tutoriels sont disponibles sur YouTube et sur le site dfir.training.',dur:'3–4 semaines'},
+    {n:'03',t:'S\'entraîner sur des cas pratiques',d:'Des plateformes comme Root-Me (française) ou Cyberdefenders proposent de vrais cas d\'investigation à résoudre : des fichiers suspects, des disques durs à analyser. C\'est la meilleure façon d\'apprendre.',dur:'2–4 mois'},
+    {n:'04',t:'Viser la certification GCFE',d:'C\'est la certification d\'entrée la plus reconnue dans le domaine forensic. Elle valide que tu sais mener une vraie investigation numérique.',dur:'3–6 mois de préparation'},
+    {n:'05',t:'Choisir son employeur : privé ou public',d:'Côté privé : cabinets spécialisés (Intrinsec, Sekoia, KPMG Cyber). Côté public : la gendarmerie nationale (C3N) et la police nationale (BL2S) ont des unités forensic qui recrutent des civils.',dur:'Après la certif'}
+  ],
+  formations:[
+    {n:'Root-Me — Section Forensics',t:'Plateforme française gratuite',c:'Gratuit',d:'À ton rythme',note:'★ Commencer ici, en français',nc:'note-green'},
+    {n:'Cyberdefenders (labs)',t:'Cas pratiques réels',c:'Gratuit / 30$/mois',d:'À ton rythme',note:'★ Exercices réalistes',nc:'note-green'},
+    {n:'BTS SIO + Licence Pro + Spécialisation',t:'Parcours public progressif',c:'Quasi gratuit',d:'3–4 ans',note:'★ Solide et accessible',nc:'note-green'},
+    {n:'Master Forensic / SSI (université)',t:'Diplôme bac+5',c:'~500€/an',d:'5 ans depuis le bac',note:'★ Reconnu par la justice',nc:'note-green'},
+    {n:'GCFE — Certification GIAC',t:'Certification internationale',c:'~949$',d:'3–6 mois de prépa',note:'★ Référence du secteur',nc:'note-green'},
+    {n:'Formation SANS Institute',t:'Formation intensive haut niveau',c:'4 000–6 000$',d:'1 semaine intensive',note:'⚠ Cher mais reconnu mondialement',nc:'note-orange'}
+  ],
+  ecoles:[
+    {n:'IUT / Université — Licence Informatique',det:'Avec spécialisation Forensic en Master',niv:'Bac+5',dur:'5 ans',cout:'~500€/an'},
+    {n:'Master Droit + Numérique (université)',det:'Pour devenir expert judiciaire agréé',niv:'Bac+5 à Bac+6',dur:'5–6 ans',cout:'~500€/an'},
+    {n:'ESIEA — Mastère Sécurité',det:'Option investigation numérique',niv:'Bac+5 à Bac+6',dur:'1–2 ans après bac+3',cout:'8 000–10 000€/an'},
+    {n:'Gendarmerie / Police nationale',det:'Formation interne aux unités N-Tech',niv:'Variable',dur:'Formation continue',cout:'Rémunéré'},
+    {n:'SANS Technology Institute',det:'Formation courte ultra-spécialisée',niv:'Professionnel',dur:'1 semaine par module',cout:'4 000–6 000$ par cours'}
+  ],
+  ressources:[
+    {t:'Plateforme française',n:'Root-Me — Forensics',d:'Des défis d\'investigation en français, progressifs et gratuits. La meilleure façon de commencer.',l:'root-me.org'},
+    {t:'Cas pratiques',n:'Cyberdefenders',d:'Des enquêtes numériques basées sur de vrais incidents. Pour s\'entraîner comme un pro.',l:'cyberdefenders.org'},
+    {t:'Outil gratuit',n:'Autopsy',d:'Le logiciel d\'investigation numérique de référence. Gratuit, utilisé par des forces de l\'ordre.',l:'autopsy.com'},
+    {t:'Outil gratuit',n:'Volatility',d:'Pour analyser la mémoire vive d\'un ordinateur et retrouver ce qui se passait au moment de l\'attaque.',l:'volatilityfoundation.org'}
+  ],
+  guide:'Commence par Root-Me en français (section Forensics), c\'est gratuit et ça te donne une vraie idée du travail. Si l\'enquête numérique te passionne, c\'est un métier où tu travailleras sur des cas uniques et fascinants — et tu seras rare sur le marché, ce qui te donnera toujours du pouvoir dans les négociations de salaire.'
+},
+
+devsecops:{
+  tag:'Développement',tc:'tag-metier',
+  title:'Ingénieur DevSecOps — La sécurité dans l\'ADN des logiciels',
+  intro:'Avant, quand une équipe de développeurs créait un logiciel, la sécurité était vérifiée tout à la fin — comme si on installait une alarme dans une maison une fois qu\'elle est déjà construite. Le DevSecOps change ça : il intègre la sécurité dès le premier jour, dès la première ligne de code. Résultat : les logiciels sont bien mieux protégés, et les problèmes coûtent 100 fois moins cher à corriger. C\'est pour ça que toutes les startups et scale-ups tech cherchent ces profils désespérément. Important : pour ce métier, il faut savoir un minimum coder. C\'est la condition de départ.',
+  infos:[
+    {l:'Salaire junior',v:'42–50k€',s:'Avec un background développement ou réseau'},
+    {l:'Salaire confirmé',v:'52–65k€',s:'3–4 ans d\'expérience'},
+    {l:'Salaire senior / architecte',v:'65–80k€',s:'Lead technique ou architecture sécurité'},
+    {l:'Prérequis',v:'Savoir coder',s:'Python, Go ou autre — non négociable'}
+  ],
+  journee:'Imagine que tu travailles dans une startup qui développe une application bancaire. Chaque jour, les développeurs écrivent du nouveau code et le publient. Ton rôle : t\'assurer que ce code ne crée pas de nouvelles failles de sécurité. Tu as mis en place des outils qui analysent automatiquement le code à chaque publication — comme un correcteur orthographique, mais pour la sécurité. Ce matin, un outil a détecté un problème dans le nouveau code : une "porte mal fermée" qui pourrait permettre à quelqu\'un de lire les données de n\'importe quel client. Tu bloques la publication, tu expliques au développeur ce qui ne va pas, il corrige, et tout le monde apprend. L\'après-midi, tu donnes une formation d\'une heure à l\'équipe de développeurs sur les erreurs à éviter. Tu es à la fois ingénieur et formateur.',
+  skills:[
+    '<strong>Savoir programmer</strong> : écrire du code (Python est le plus recommandé pour commencer) — c\'est le prérequis absolu de ce métier',
+    '<strong>La construction de logiciels</strong> : comprendre comment un logiciel est créé, testé et publié (le processus s\'appelle CI/CD)',
+    '<strong>Les conteneurs</strong> : Docker est un outil qui "emballe" les logiciels pour les rendre plus faciles à déployer. Apprendre à le sécuriser est essentiel',
+    '<strong>Les outils d\'analyse de code</strong> : des logiciels qui lisent le code des développeurs et détectent automatiquement les erreurs de sécurité',
+    '<strong>Le cloud</strong> : la plupart des applications modernes tournent sur des serveurs loués à des géants comme Amazon (AWS) ou Microsoft (Azure)'
+  ],
+  parcours:[
+    {n:'01',t:'Apprendre à programmer en Python',d:'Si tu ne sais pas encore coder, commence par Python — c\'est le plus simple à apprendre et le plus utilisé dans la cybersécurité. Le cours "Python pour tous" sur Coursera est entièrement gratuit.',dur:'3–6 mois'},
+    {n:'02',t:'Comprendre Linux et Docker',d:'Linux est l\'environnement de travail de presque tous les ingénieurs. Docker est l\'outil qui "empaquète" les applications. Les deux sont essentiels — et les formations officielles sont gratuites.',dur:'1–2 mois'},
+    {n:'03',t:'Créer ton premier pipeline de sécurité',d:'GitLab (gratuit) te permet de créer un "pipeline" — une chaîne automatique qui vérifie la sécurité du code à chaque publication. Créer le tien, même sur un petit projet perso, prouve tes compétences.',dur:'3–4 semaines'},
+    {n:'04',t:'Apprendre les 10 failles web les plus courantes',d:'L\'OWASP est une organisation mondiale qui publie gratuitement la liste des 10 types d\'erreurs de sécurité les plus fréquentes dans les logiciels. La connaître par cœur, c\'est la base du DevSecOps.',dur:'1–2 semaines'},
+    {n:'05',t:'Viser une certification cloud ou DevOps',d:'La certification AWS Security Specialty prouve que tu sais sécuriser les applications dans le cloud. C\'est ce que cherchent les startups. Alternativement, vise une licence pro ou un master DevOps avec module sécurité.',dur:'3–5 mois'}
+  ],
+  formations:[
+    {n:'Python pour tous (Coursera)',t:'MOOC gratuit en ligne',c:'Gratuit (mode audit)',d:'2–3 mois',note:'★ Point de départ si tu ne codes pas',nc:'note-green'},
+    {n:'BTS SIO + Licence Pro DevOps',t:'Parcours public progressif',c:'Quasi gratuit',d:'3 ans',note:'★ Bon chemin académique',nc:'note-green'},
+    {n:'Licence Pro DevOps / Cloud (université)',t:'Diplôme bac+3',c:'~400€/an',d:'1 an après bac+2',note:'★ Reconnu, accessible',nc:'note-green'},
+    {n:'Master Cybersécurité (université)',t:'Diplôme bac+5',c:'~500€/an',d:'2 ans après licence',note:'★ Pour les postes seniors',nc:'note-green'},
+    {n:'AWS Security Specialty',t:'Certification cloud',c:'~300$',d:'3–5 mois de prépa',note:'★ Très cherchée en startup',nc:'note-green'},
+    {n:'Bootcamp DevOps (école privée)',t:'Formation intensive',c:'5 000–12 000€',d:'3–6 mois',note:'⚠ Vérifier le volet sécurité',nc:'note-orange'}
+  ],
+  ecoles:[
+    {n:'IUT / Université — BUT Informatique',det:'Option développement logiciel + module sécu',niv:'Bac+3',dur:'3 ans',cout:'~400€/an'},
+    {n:'Université — Master DevOps / Cybersécurité',det:'Parcours Génie Logiciel & Sécurité',niv:'Bac+5',dur:'5 ans depuis le bac',cout:'~500€/an'},
+    {n:'EPITECH',det:'École de développement avec option sécurité',niv:'Bac+5',dur:'5 ans',cout:'8 000–10 000€/an'},
+    {n:'École d\'ingénieur (INSA, Polytech, ENSTA)',det:'Spécialité Systèmes Distribués & Sécurité',niv:'Bac+5',dur:'5 ans',cout:'Gratuit ou faible'},
+    {n:'ESIEA',det:'Option Sécurité Logicielle et DevSecOps',niv:'Bac+5',dur:'5 ans',cout:'7 000–9 000€/an'}
+  ],
+  ressources:[
+    {t:'Guide mondial gratuit',n:'OWASP Top 10',d:'La liste des 10 failles les plus courantes dans les logiciels. La lire et la comprendre est la base du DevSecOps.',l:'owasp.org'},
+    {t:'Outil gratuit',n:'Snyk',d:'Un logiciel qui analyse ton code et trouve les problèmes de sécurité. Gratuit pour les projets personnels.',l:'snyk.io'},
+    {t:'Plateforme de développement',n:'GitLab (gratuit)',d:'Crée ton premier pipeline de sécurité automatisé. Tutoriel officiel disponible.',l:'gitlab.com'},
+    {t:'Guide communautaire',n:'OWASP DevSecOps Guideline',d:'Un guide complet et gratuit sur la sécurité dans le développement logiciel. La référence mondiale.',l:'owasp.org'}
+  ],
+  guide:'Si tu ne sais pas encore coder, commence par Python sur Coursera ce soir (gratuit). Si tu sais déjà coder, commence par lire l\'OWASP Top 10 (30 minutes de lecture) et installe Snyk sur un projet perso. C\'est le métier avec la plus forte croissance salariale dans la tech en ce moment — et les entreprises manquent tellement de ces profils qu\'elles forment volontiers des juniors motivés.'
+},
+
+bugbounty:{
+  tag:'Freelance / Indépendant',tc:'tag-bounty',
+  title:'Bug Bounty — Trouver des failles et se faire payer',
+  intro:'Les plus grandes entreprises du monde — Google, Microsoft, Apple, Facebook, des banques, des gouvernements — paient des hackers indépendants pour trouver les failles dans leurs systèmes avant que les criminels ne le fassent. C\'est ce qu\'on appelle le "bug bounty". La récompense pour avoir trouvé une faille peut aller de quelques centaines d\'euros à plusieurs dizaines de milliers d\'euros pour une seule découverte. Certains chasseurs de primes numériques gagnent plus de 100 000 € par an. C\'est un métier qui demande un vrai niveau technique — mais le chemin pour y arriver est accessible à tout le monde.',
+  infos:[
+    {l:'Revenus débutant',v:'0–5k€/an',s:'Premières soumissions, apprentissage'},
+    {l:'Revenus intermédiaire',v:'10–40k€/an',s:'Quelques belles trouvailles'},
+    {l:'Revenus expert',v:'50–100k€+/an',s:'Failles critiques dans de grands systèmes'},
+    {l:'Statut',v:'Freelance',s:'Travail depuis chez soi, à son rythme'}
+  ],
+  journee:'Tu travailles depuis chez toi, sans horaires fixes. Tu choisis toi-même sur quelle entreprise tu vas tester la sécurité — parce qu\'elles ont publié une invitation officielle sur une plateforme spécialisée. La règle d\'or : tu as le droit de tester uniquement les systèmes qui ont publié cette invitation, et uniquement dans les zones définies. Tu passes ta journée à explorer un site web ou une application mobile, à chercher des comportements anormaux. Un jour, tu trouves une faille qui permet à n\'importe qui de voir les données privées d\'autres utilisateurs. Tu la documentes avec précision, tu l\'envoies à l\'entreprise via la plateforme. L\'entreprise la vérifie, la confirme, et t\'envoie une récompense. Entre 500 € et 50 000 € selon la gravité.',
+  skills:[
+    '<strong>Comprendre comment fonctionnent les applications web</strong> : comment un site internet communique avec ses serveurs, comment les données circulent',
+    '<strong>Savoir tester des fonctionnalités</strong> : explorer méthodiquement toutes les parties d\'une application pour trouver ce qui se comporte mal',
+    '<strong>Outils d\'analyse web</strong> : Burp Suite est l\'outil phare — il permet d\'intercepter et analyser les communications entre ton navigateur et un site',
+    '<strong>Persévérance</strong> : beaucoup de jours sans trouver quoi que ce soit. Il faut tenir sur la durée',
+    '<strong>Documentation précise</strong> : une faille mal documentée ne sera pas payée — il faut expliquer clairement le problème et comment le reproduire'
+  ],
+  parcours:[
+    {n:'01',t:'Maîtriser les bases du web et des réseaux',d:'Avant de chercher des failles, il faut comprendre comment fonctionnent les sites internet, les applications, les échanges de données. Cours recommandé : "Les réseaux de zéro" sur OpenClassrooms.',dur:'1–2 mois'},
+    {n:'02',t:'S\'entraîner sur TryHackMe',d:'TryHackMe propose un parcours spécifique "Web Fundamentals" qui te prépare à la chasse aux bugs. C\'est là que tout commence pour la plupart des chasseurs de primes.',dur:'2–3 mois'},
+    {n:'03',t:'Apprendre Burp Suite',d:'Burp Suite est l\'outil numéro 1 pour analyser les applications web. PortSwigger (l\'entreprise qui le fait) propose une académie entièrement gratuite avec des exercices pratiques. C\'est la référence.',dur:'1–3 mois'},
+    {n:'04',t:'S\'inscrire sur les plateformes Bug Bounty',d:'HackerOne et YesWeHack (française) sont les deux grandes plateformes. Commence par des programmes pour débutants — les entreprises signalent souvent le niveau requis. Tes premières soumissions seront probablement refusées. C\'est normal.',dur:'Dès que tu as les bases'},
+    {n:'05',t:'Construire ton palmarès progressivement',d:'Chaque faille trouvée et payée s\'ajoute à ton profil public sur la plateforme. Avec le temps, tu gagnes en réputation et tu peux accéder à des programmes privés — plus rémunérateurs et moins concurrentiels.',dur:'En continu'}
+  ],
+  formations:[
+    {n:'PortSwigger Web Security Academy',t:'Formation gratuite officielle',c:'Gratuit',d:'2–4 mois',note:'★ La meilleure formation bug bounty',nc:'note-green'},
+    {n:'TryHackMe — Web Fundamentals',t:'Parcours en ligne guidé',c:'Gratuit / 14€/mois',d:'2–3 mois',note:'★ Bon point de départ',nc:'note-green'},
+    {n:'BTS SIO + Licence Pro',t:'Parcours public solide',c:'Quasi gratuit',d:'3 ans',note:'★ Bonne base technique',nc:'note-green'},
+    {n:'Master Cybersécurité (université)',t:'Diplôme bac+5',c:'~500€/an',d:'5 ans depuis le bac',note:'★ Ouvre aussi les portes du salariat',nc:'note-green'},
+    {n:'Certification BSCP (PortSwigger)',t:'Certification web sécurité',c:'299$',d:'Prépa libre',note:'★ Reconnue dans la communauté',nc:'note-green'},
+    {n:'Formations YouTube (Bug Bounty Hunting)',t:'Communauté en ligne',c:'Gratuit',d:'À ton rythme',note:'⚠ Variable en qualité',nc:'note-orange'}
+  ],
+  ecoles:[
+    {n:'Université — Licence + Master Sécu',det:'Le chemin académique classique en parallèle',niv:'Bac+5',dur:'5 ans',cout:'~500€/an'},
+    {n:'Guardia / EPITA / ESIEA',det:'École spécialisée + pratique bug bounty en perso',niv:'Bac+3 à Bac+5',dur:'3 à 5 ans',cout:'7 000–11 000€/an'},
+    {n:'Autodidacte pur',det:'TryHackMe + PortSwigger Academy + pratique',niv:'Aucun diplôme requis',dur:'6 mois à 2 ans',cout:'Quasi gratuit'},
+    {n:'IUT Informatique + spécialisation perso',det:'Base solide + entraînement en autodidacte',niv:'Bac+3',dur:'3 ans + pratique',cout:'~400€/an'}
+  ],
+  ressources:[
+    {t:'Formation gratuite',n:'PortSwigger Web Security Academy',d:'LA formation de référence pour le bug bounty. Entièrement gratuite, créée par les experts de Burp Suite.',l:'portswigger.net/web-security'},
+    {t:'Plateforme française',n:'YesWeHack',d:'La grande plateforme européenne de bug bounty. Parfaite pour commencer avec des programmes francophones.',l:'yeswehack.com'},
+    {t:'Plateforme mondiale',n:'HackerOne',d:'La plus grande plateforme mondiale. Des programmes pour tous les niveaux, certains spécialement pour débutants.',l:'hackerone.com'},
+    {t:'Outil professionnel',n:'Burp Suite Community Edition',d:'L\'outil numéro 1 pour analyser les applications web. La version de base est gratuite.',l:'portswigger.net/burp'}
+  ],
+  guide:'Commence par l\'académie PortSwigger ce soir — c\'est entièrement gratuit et c\'est la meilleure formation qui existe pour la chasse aux bugs. Une fois que tu as terminé les premiers modules, inscris-toi sur YesWeHack (plateforme française) et commence par les programmes marqués "débutants". Tes premières soumissions seront probablement refusées — mais chaque refus t\'apprend quelque chose. Les meilleurs chasseurs de bugs ont tous commencé pareil.'
+}
+
 };
 
 function showPage(n){
@@ -433,12 +727,19 @@ function goTo(id){
 function showMetier(id){
   const m=DATA[id];
   if(!m)return;
+
   const infos=m.infos.map(i=>`<div class="info-card"><div class="info-card-label">${i.l}</div><div class="info-card-value">${i.v}</div><div class="info-card-sub">${i.s}</div></div>`).join('');
   const skills=m.skills.map(s=>`<li>${s}</li>`).join('');
   const parcours=m.parcours.map(p=>`<div class="parcours-step"><span class="step-num">${p.n}</span><div class="step-content"><h4>${p.t}</h4><p>${p.d}</p></div><span class="step-duration">${p.dur}</span></div>`).join('');
-  const fhead=`<div class="formation-row header"><span>Formation</span><span>Type</span><span>Coût</span><span>Durée</span></div>`;
+
+  const fhead=`<div class="formation-row header"><span>Formation</span><span>Coût</span><span>Durée</span><span>Avis</span></div>`;
   const frows=m.formations.map(f=>`<div class="formation-row"><div><div class="formation-name">${f.n}</div><div class="formation-detail">${f.t}</div></div><div class="formation-cost">${f.c}</div><div class="formation-dur">${f.d}</div><div class="formation-note ${f.nc}">${f.note}</div></div>`).join('');
+
+  const ehead=`<div class="ecole-row header"><span>École / Établissement</span><span>Diplôme</span><span>Durée</span><span>Coût / an</span></div>`;
+  const erows=m.ecoles.map(e=>`<div class="ecole-row"><div><div class="ecole-name">${e.n}</div><div class="ecole-detail">${e.det}</div></div><div class="ecole-niv">${e.niv}</div><div class="ecole-dur">${e.dur}</div><div class="ecole-cout">${e.cout}</div></div>`).join('');
+
   const res=m.ressources.map(r=>`<div class="ressource-card"><div class="r-type">${r.t}</div><h4>${r.n}</h4><p>${r.d}</p><span class="r-link">→ ${r.l}</span></div>`).join('');
+
   document.getElementById('metier-content').innerHTML=`
     <button class="back-btn" onclick="showPage('home');goTo('metiers')">← Retour aux métiers</button>
     <div class="metier-header">
@@ -448,32 +749,40 @@ function showMetier(id){
     </div>
     <div class="info-grid">${infos}</div>
     <div class="content-block">
-      <h3>Une journée type</h3>
+      <h3>À quoi ressemble une journée de travail ?</h3>
       <p>${m.journee}</p>
     </div>
     <div class="content-block">
-      <h3>Compétences clés pour ce métier</h3>
+      <h3>Ce qu'il faut apprendre pour ce métier</h3>
+      <p style="font-size:0.85rem;color:var(--text2);margin-bottom:1rem">Pas de panique — tout s'apprend. Personne ne naît avec ces compétences.</p>
       <ul>${skills}</ul>
     </div>
     <div class="content-block">
-      <h3>Parcours recommandé — étape par étape</h3>
-      <p style="font-size:0.85rem;color:var(--text2);margin-bottom:1rem">Ce parcours est indicatif. Tu peux aller plus vite selon ton background.</p>
+      <h3>Ton parcours, étape par étape</h3>
+      <p style="font-size:0.85rem;color:var(--text2);margin-bottom:1rem">Ce parcours est indicatif. Tu peux aller plus vite ou plus lentement selon ton background et ton temps disponible.</p>
       <div class="parcours">${parcours}</div>
     </div>
     <div class="content-block">
-      <h3>Formations disponibles</h3>
+      <h3>Les formations disponibles</h3>
       <div class="formations">${fhead}${frows}</div>
-      <p style="font-size:0.78rem;color:var(--text3);margin-top:0.75rem">⚠ Les prix peuvent évoluer. Beaucoup de ces formations sont finançables via le CPF.</p>
+      <p style="font-size:0.78rem;color:var(--text3);margin-top:0.75rem">⚠ Les prix peuvent évoluer. Beaucoup de ces formations sont finançables via le CPF (ton compte personnel de formation). Renseigne-toi sur moncompteformation.gouv.fr</p>
     </div>
     <div class="content-block">
-      <h3>Ressources pour commencer</h3>
+      <h3>Les écoles et parcours académiques</h3>
+      <p style="font-size:0.85rem;color:var(--text2);margin-bottom:1rem">Du bac+2 au bac+6 — tous les niveaux ont leur place dans la cybersécurité.</p>
+      <div class="ecoles">${ehead}${erows}</div>
+    </div>
+    <div class="content-block">
+      <h3>Pour aller plus loin — les ressources gratuites</h3>
       <div class="ressources-grid">${res}</div>
     </div>
     <div class="guide-box">
-      <h3>🎯 Par où commencer concrètement ?</h3>
+      <h3>🎯 Par où commencer — concrètement, ce soir</h3>
       <p>${m.guide}</p>
       <button class="btn btn-outline" onclick="showPage('home');goTo('metiers')">← Voir les autres métiers</button>
-    </div>`;
+    </div>
+  `;
+
   showPage('metier');
 }
 </script>
